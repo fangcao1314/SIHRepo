@@ -1,69 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-<form action="res.html" method="post">
-    
-    <p>
-        <label for="Phosphate">PHOSPHATE:</label>
-        <input type="text" name="Phosphate" id="Phosphate">
-    </p>
-    <p>
-        <label for="Potassium">POTASSIUM:</label>
-        <input type="text" name="Potassium" id="Potassium">
-    </p>
-    <p>
-        <label for="TOTAL BILIRUBIN">TOTAL BILIRUBIN:</label>
-        <input type="text" name="TOTAL BILIRUBIN" id="TOTAL BILIRUBIN">
-    </p>
-    <p>
-        <label for="TROPONIN I">TROPONIN I:</label>
-        <input type="text" name="TROPONIN I" id="TROPONIN I">
-    </p>
-    <p>
-        <label for="Hct">HEMATOCRIT:</label>
-        <input type="text" name="Hct" id="Hct">
-    </p>
-    <p>
-        <label for="Hb">HAEMOGLOBIN(Hb):</label>
-        <input type="text" name="Hb" id="Hb">
-    </p>
-    <p>
-        <label for="PTT">PARTIAL THROMBOPLASTIN TIME(PTT):</label>
-        <input type="text" name="PTT" id="PTT">
-    </p>
-    <p>
-        <label for="WBC">LEUCOCYTE COUNT:</label>
-        <input type="text" name="WBC" id="WBC">
-    </p>
-    <p>
-        <label for="FIBRINOGEN">FIBRINOGEN:</label>
-        <input type="text" name="FIBRINOGEN" id="FIBRINOGEN">
-    </p>
-    <p>
-        <label for="PLATELATE">PLATELATE:</label>
-        <input type="text" name="PLATELATE" id="PLATELATE">
-    </p>
-    <p>
-        <label for="Unit1">ADMINISTRATIVE UNIT FOR ICU(MICU):</label>
-        <input type="text" name="Unit1" id="Unit1">
-    </p>
-    <p>
-        <label for="Unit2">ADMINISTRATIVE UNIT FOR ICU(MICU):</label>
-        <input type="text" name="Unit2" id="Unit2">
-    </p>
-    <p>
-        <label for="HospAdmTime">HOURS BETWEEN HOSPITAL ADMIT AND ICU ADMIT:</label>
-        <input type="text" name="HospAdmTime" id="HospAdmTime">
-    </p>
-    <p>
-        <label for="ICULOS">ICU LENGTH OF STAY(ICULOS):</label>
-        <input type="text" name="ICULOS" id="ICULOS">
-    </p>
-    <input type="submit" value="Submit">
-</form>
 
-</body>
-</html>
+<head>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/form-style.css">
+    <title>LABORATORY VALUES</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body class="bg-dark">
+    <div class="container col-md-9 bg-white pb-4 col-sm-11">
+        <div class="pb-5 pt-4">
+            <center>
+                <h1>LAB &nbsp;VALUES</h1>
+            </center>
+        </div>
+        <form action="res.html" method="post">
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Phosphate" class="col-md-8">PHOSPHATE:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Phosphate" id="Phosphate">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Potassium" class="col-md-8">POTASSIUM:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Potassium" id="Potassium">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="TOTAL BILIRUBIN" class="col-md-8">TOTAL BILIRUBIN:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="TOTAL BILIRUBIN" id="TOTAL BILIRUBIN">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="TROPONIN I" class="col-md-8">TROPONIN I:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="TROPONIN I" id="TROPONIN I">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Hct" class="col-md-8">HEMATOCRIT:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Hct" id="Hct">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Hb" class="col-md-8">HAEMOGLOBIN(Hb):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Hb" id="Hb">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="PTT" class="col-md-8">PARTIAL THROMBOPLASTIN TIME(PTT):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="PTT" id="PTT">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="WBC" class="col-md-8">LEUCOCYTE COUNT:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="WBC" id="WBC">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="FIBRINOGEN" class="col-md-8">FIBRINOGEN:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="FIBRINOGEN" id="FIBRINOGEN">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="PLATELATE" class="col-md-8">PLATELATE:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="PLATELATE" id="PLATELATE">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Unit1" class="col-md-8">ADMINISTRATIVE UNIT FOR ICU(MICU):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Unit1" id="Unit1">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Unit2" class="col-md-8">ADMINISTRATIVE UNIT FOR ICU(MICU):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Unit2" id="Unit2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="HospAdmTime" class="col-md-8">HOURS BETWEEN HOSPITAL ADMIT AND ICU ADMIT:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="HospAdmTime" id="HospAdmTime">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="ICULOS" class="col-md-8">ICU LENGTH OF STAY(ICULOS):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="ICULOS" id="ICULOS">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 mb-5">
+                <center>
+                    <input type="submit" class="btn btn-lg btn-dark" value="SUBMIT">
+                </center>
+            </div>
+        </form>
+    </div>
+</body></html>
