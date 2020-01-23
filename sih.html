@@ -6,6 +6,44 @@
     <title>VITAL SIGNS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SCRIPTS TO SEND FORM DATA TO NEXT PAGE -->
+    <script type = "text/javascript">
+      function WriteStorage() {
+         value = document.myform.age.value;
+         localStorage.setItem("age",value);
+
+         value = document.myform.gender.value;
+         localStorage.setItem("gender",value);
+
+         value = document.myform.HR.value;
+         localStorage.setItem("HR",value);
+
+         value = document.myform.O2Sat.value;
+         localStorage.setItem("O2Sat",value);
+
+         value = document.myform.Temp.value;
+         localStorage.setItem("Temp",value);
+
+         value = document.myform.SBP.value;
+         localStorage.setItem("SBP",value);
+
+         value = document.myform.MAP.value;
+         localStorage.setItem("MAP",value);
+
+         value = document.myform.DBP.value;
+         localStorage.setItem("DBP",value);
+
+         value = document.myform.Resp.value;
+         localStorage.setItem("Resp",value);
+
+         value = document.myform.EtCO2.value;
+         localStorage.setItem("EtCO2",value);
+
+         window.open("req.html");
+      }
+    </script>
+
 </head>
 
 <body class="bg-dark">
@@ -15,8 +53,22 @@
                 <h1>VITAL &nbsp;SIGNS</h1>
             </center>
         </div>
-        <form action="req.html" method="post">
+        <form name="myform">
             <center>
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="age" class="col-md-8">AGE:</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="age" id="age">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="gender" class="col-md-8">GENDER:</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="gender" id="gender">
+                    </div>
+                </div>
+
                 <div class="form-group row col-md-6 col-sm-12">
                     <label for="email-id" class="col-md-8">HEART RATE(HR):</label>
                     <div class="col md-4">
@@ -53,13 +105,6 @@
                 </div>
 
                 <div class="form-group row col-md-6 col-sm-12">
-                    <label for="Temp" class="col-md-8">TEMPERATURE(Temp):</label>
-                    <div class="col md-4">
-                        <input type="text" class="form-control" name="Temp" id="Temp">
-                    </div>
-                </div>
-
-                <div class="form-group row col-md-6 col-sm-12">
                     <label for="DBP" class="col-md-8">DIASTOLIC BP(DBP):</label>
                     <div class="col md-4">
                         <input type="text" class="form-control" name="DBP" id="DBP">
@@ -83,7 +128,7 @@
             </center>
             <div class="mt-4 mb-3">
                 <center>
-                    <input type="submit" class="btn btn-dark btn-lg" value="NEXT">
+                    <input type="submit" class="btn btn-dark btn-lg" value="NEXT" onclick = "WriteStorage();">
                 </center>
             </div>
         </form>
