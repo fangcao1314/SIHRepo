@@ -1,75 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/form-style.css">
+    <title>LABORATORY VALUES</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body>
-<form action="req1.html" method="post">
-    <p>
-        <label for="BaseExcess">MEASURE OF EXCESS BICARBONATE(BaseExcess):</label>
-        <input type="text" name="BaseExcess" id="BaseExcess">
-    </p>
-      <p>
-        <label for="HCO3">BICARBONATE(HCO3):</label>
-        <input type="text" name="HCO3" id="HCO3">
-    </p>
-    <p>
-        <label for="FiO2">FRACTION OF INSPIRED OXYGEN:</label>
-        <input type="text" name="FiO2" id="FiO2">
-    </p>
-    <p>
-        <label for="pH">pH:</label>
-        <input type="text" name="pH" id="pH">
-    </p>
-    <p>
-        <label for="PaCO2">PARTIAL PRESSURE OF CO2 IN ARTERIAL BLOOD(PaCO2):</label>
-        <input type="text" name="PaCO2" id="PaCO2">
-    </p>
-    <p>
-        <label for="SaO2">OXYGEN SATURATION OF ARTERIAL BLOOD(SaO2):</label>
-        <input type="text" name="SaO2" id="SaO2">
-    </p>
-    <p>
-        <label for="AST">ASPARTATE TRANSAMINASE(AST):</label>
-        <input type="text" name="AST" id="AST">
-    </p>
-    <p>
-        <label for="BUN">BLOOD UREA NITROGEN(BUN):</label>
-        <input type="text" name="BUN" id="BUN">
-    </p>
-    <p>
-        <label for="Alkalinephos">ALKALINE PHOSPHATE(Alkalinephos):</label>
-        <input type="text" name="Alkalinephos" id="Alkalinephos">
-    </p>
-      <p>
-        <label for="Calcium">CALCIUM:</label>
-        <input type="text" name="Calcium" id="Calcium">
-    </p>
-    <p>
-        <label for="Chloride">CHLORIDE:</label>
-        <input type="text" name="Chloride" id="Chloride">
-    </p>
-    <p>
-        <label for="Creatinine">CREATININE:</label>
-        <input type="text" name="Creatinine" id="Creatinine">
-    </p>
-    <p>
-        <label for="Bilirubin_direct">BILIRUBIN DIRECT:</label>
-        <input type="text" name="Bilirubin_direct" id="Bilirubin_direct">
-    </p>
-    <p>
-        <label for="Glucose">SERUM GLUCOSE(Glucose):</label>
-        <input type="text" name="Glucose" id="Glucose">
-    </p>
-      <p>
-        <label for="Lactate">LACTIC ACID:</label>
-        <input type="text" name="Lactate" id="Lactate">
-    </p>
-    <p>
-        <label for="Magnesium">MAGNESIUM:</label>
-        <input type="text" name="Magnesium" id="Magnesium">
-    </p>
-    <input type="submit" value="NEXT">
-</form>
-</body>
-</html>
+
+<body class="bg-dark">
+    <div class="container col-md-9 bg-white pb-3 col-sm-11">
+        <div class="pb-5 pt-3">
+            <center>
+                <h1>LAB &nbsp;VALUES</h1>
+            </center>
+        </div>
+        <form action="req1.html" method="post">
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="BaseExcess" class="col-md-8">MEASURE OF EXCESS BICARBONATE (BaseExcess):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="BaseExcess" id="BaseExcess">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="HCO3" class="col-md-8">BICARBONATE (HCO3):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="HCO3" id="HCO3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="FiO2" class="col-md-8">FRACTION OF INSPIRED OXYGEN:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="FiO2" id="FiO2">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="pH" class="col-md-8">pH:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="pH" id="pH">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="PaCO2" class="col-md-8">PARTIAL PRESSURE OF CO2 IN ARTERIAL BLOOD (PaCO2):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="PaCO2" id="PaCO2">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="SaO2" class="col-md-8">OXYGEN SATURATION OF ARTERIAL BLOOD (SaO2):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="SaO2" id="SaO2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="AST" class="col-md-8">ASPARTATE TRANSAMINASE (AST):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="AST" id="AST">
+                    </div>
+                </div>
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="BUN" class="col-md-8">BLOOD UREA NITROGEN (BUN):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="BUN" id="BUN">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Alkalinephos" class="col-md-8">ALKALINE PHOSPHATE (Alkalinephos):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Alkalinephos" id="Alkalinephos">
+                    </div>
+                </div>
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Calcium" class="col-md-8">CALCIUM:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Calcium" id="Calcium">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Chloride" class="col-md-8">CHLORIDE:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Chloride" id="Chloride">
+                    </div>
+                </div>
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Creatinine" class="col-md-8">CREATININE:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Creatinine" id="Creatinine">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Bilirubin_direct" class="col-md-8">BILIRUBIN DIRECT:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Bilirubin_direct" id="Bilirubin_direct">
+                    </div>
+                </div>
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Magnesium" class="col-md-8">MAGNESIUM:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Magnesium" id="Magnesium">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12 col-sm-12">
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Glucose" class="col-md-8">SERUM GLUCOSE(Glucose):</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Glucose" id="Glucose">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Lactate" class="col-md-8">LACTIC ACID:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="Lactate" id="Lactate">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 mb-3">
+                <center>
+                    <input type="submit" class="btn btn-dark btn-lg" value="NEXT">
+                </center>
+            </div>
+        </form>
+    </div>
+</body></html>
