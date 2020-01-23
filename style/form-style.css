@@ -1,0 +1,15 @@
+body {
+    font-family: georgia;
+}
+
+label {
+    text-align: left;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+.form-control:valid {
+    background-color: lavender;
+}
