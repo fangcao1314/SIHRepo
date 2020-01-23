@@ -6,6 +6,55 @@
     <title>RESULT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SCRIPTS TO SEND FORM DATA TO API AND GET THE RESULT -->
+      <script type = "text/javascript">
+      function ReadCookie() {
+         document.getElementById("result").innerHTML = "Loading Result";
+         setTimeout(function(){
+             document.write (localStorage.getItem("age"));
+             document.write (localStorage.getItem("gender"));
+             document.write (localStorage.getItem("HR"));
+             document.write (localStorage.getItem("O2Sat"));
+             document.write (localStorage.getItem("Temp"));
+             document.write (localStorage.getItem("SBP"));
+             document.write (localStorage.getItem("MAP"));
+             document.write (localStorage.getItem("DBP"));
+             document.write (localStorage.getItem("Resp"));
+             document.write (localStorage.getItem("EtCO2"));
+             document.write (localStorage.getItem("BaseExcess"));
+             document.write (localStorage.getItem("HCO3"));
+             document.write (localStorage.getItem("FiO2"));
+             document.write (localStorage.getItem("pH"));
+             document.write (localStorage.getItem("PaCO2"));
+             document.write (localStorage.getItem("SaO2"));
+             document.write (localStorage.getItem("AST"));
+             document.write (localStorage.getItem("BUN"));
+             document.write (localStorage.getItem("Alkalinephos"));
+             document.write (localStorage.getItem("Calcium"));
+             document.write (localStorage.getItem("Chloride"));
+             document.write (localStorage.getItem("Creatinine"));
+             document.write (localStorage.getItem("Bilirubin_direct"));
+             document.write (localStorage.getItem("Glucose"));
+             document.write (localStorage.getItem("Lactate"));
+             document.write (localStorage.getItem("Magnesium"));
+             document.write (localStorage.getItem("Phosphate"));
+             document.write (localStorage.getItem("Potassium"));
+             document.write (localStorage.getItem("BILIRUBIN"));
+             document.write (localStorage.getItem("TROPONIN"));
+             document.write (localStorage.getItem("Hct"));
+             document.write (localStorage.getItem("Hb"));
+             document.write (localStorage.getItem("PTT"));
+             document.write (localStorage.getItem("WBC"));
+             document.write (localStorage.getItem("FIBRINOGEN"));
+             document.write (localStorage.getItem("PLATELATE"));
+             document.write (localStorage.getItem("Unit1"));
+             document.write (localStorage.getItem("Unit2"));
+             document.write (localStorage.getItem("HospAdmTime"));
+             document.write (localStorage.getItem("ICULOS"));
+         },2000);
+      }
+   </script>    
 </head>
 
 <body class="bg-dark">
@@ -13,6 +62,8 @@
         <div class="pb-5 pt-3">
             <center>
                 <h1>RESULT</h1>
+                <input type="button" value="Get Result" onclick = "ReadCookie()"> <br>
+                <h3 id="result"></h3>
             </center>
         </div>
         <div>
