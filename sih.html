@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/form-style.css">
+    <title>VITAL SIGNS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body>
-<form action="req.html" method="post">
-    <p>
-        <label for="email-id">HEART RATE(HR):</label>
-        <input type="text" name="HR" id="HR">
-    </p>
-      <p>
-        <label for="O2Sat">PULSE OXIMETRY(O2Sat):</label>
-        <input type="text" name="O2Sat" id="O2Sat">
-    </p>
-    <p>
-        <label for="Temp">TEMPERATURE(Temp):</label>
-        <input type="text" name="Temp" id="Temp">
-    </p>
-    <p>
-        <label for="SBP">SYSTOLIC BP(SBP):</label>
-        <input type="text" name="SBP" id="SBP">
-    </p>
-    <p>
-        <label for="MAP">MEAN ARTERIAL PRESSURE(MAP):</label>
-        <input type="text" name="MAP" id="MAP">
-    </p>
-    <p>
-        <label for="DBP">DIASTOLIC BP(DBP):</label>
-        <input type="text" name="DBP" id="DBP">
-    </p>
-    <p>
-        <label for="Resp">RESPIRATION ERROR(Resp):</label>
-        <input type="text" name="Resp" id="Resp">
-    </p>
-    <p>
-        <label for="EtCO2">END TIDAL CO2(EtCO2):</label>
-        <input type="text" name="EtCO2" id="EtCO2">
-    </p>
-   
-    <input type="submit" value="NEXT">
-</form>
-</body>
-</html>
+
+<body class="bg-dark">
+    <div class="container col-md-9 bg-white pb-3 col-sm-11">
+        <div class="pb-5 pt-3">
+            <center>
+                <h1>VITAL &nbsp;SIGNS</h1>
+            </center>
+        </div>
+        <form action="req.html" method="post">
+            <center>
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="email-id" class="col-md-8">HEART RATE(HR):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="HR" id="HR">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="O2Sat" class="col-md-8">PULSE OXIMETRY(O2Sat):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="O2Sat" id="O2Sat">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Temp" class="col-md-8">TEMPERATURE(Temp):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="Temp" id="Temp">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="SBP" class="col-md-8">SYSTOLIC BP(SBP):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="SBP" id="SBP">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="MAP" class="col-md-8">MEAN ARTERIAL PRESSURE(MAP):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="MAP" id="MAP">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Temp" class="col-md-8">TEMPERATURE(Temp):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="Temp" id="Temp">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="DBP" class="col-md-8">DIASTOLIC BP(DBP):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="DBP" id="DBP">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="Resp" class="col-md-8">RESPIRATION ERROR(Resp):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="Resp" id="Resp">
+                    </div>
+                </div>
+
+                <div class="form-group row col-md-6 col-sm-12">
+                    <label for="EtCO2" class="col-md-8">END TIDAL CO2(EtCO2):</label>
+                    <div class="col md-4">
+                        <input type="text" class="form-control" name="EtCO2" id="EtCO2">
+                    </div>
+                </div>
+
+            </center>
+            <div class="mt-4 mb-3">
+                <center>
+                    <input type="submit" class="btn btn-dark btn-lg" value="NEXT">
+                </center>
+            </div>
+        </form>
+    </div>
+</body></html>
