@@ -57,16 +57,23 @@ h2 {
     transform: scale(1.03);
 }
 
-#vital-signs {
 
-    background-color: lavenderblush;
+#banner{
+    background-image: url(hlt.jpg);
+}
 
+#banner-text{
+    background-color: #ffffffaa;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0;
+    margin: 10px 200px 30px;
+    font-size: 18px;
 }
 
 #lab-values {
     background-color: beige;
 }
-
 
 /* Cool infinite background scrolling animation.
  * Twitter: @kootoopas
@@ -141,3 +148,9 @@ h2 {
   font-weight: 100;
   font-style: normal;
 }*/
+#banner-text h1{
+    padding: 0;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 500;
+}
