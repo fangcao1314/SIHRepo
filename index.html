@@ -133,13 +133,24 @@
 
             window.open("response.html");
         }
+
     </script>
 
 </head>
 
 <body class="bg-dark mystyle">
+   
+    <!-- this is just jumbotrone -->
+    <div class="jumbotron jumbotron-fluid mb-0">
+        <div class="container ml-5 pl-5">
+            <h1 class="ml-5 pl-5">Sepsis Disease Prediction</h1>
+            <p class=" text-s pl-5 ml-5">We are glad that you came here</p>
+        </div>
+    </div>
+   
     <div id="filter">
         <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow">
+           
             <div class="pb-5 pt-3">
                 <center>
                     <h1>VITAL &nbsp;SIGNS</h1>
@@ -204,7 +215,7 @@
                     </div>
 
                     <div class="form-group row col-md-6 col-sm-12">
-                        <label for="Resp" class="col-md-8">RESPIRATION ERROR(Resp):</label>
+                        <label for="Resp" class="col-md-8">RESPIRATION RATE(Resp):</label>
                         <div class="col md-4">
                             <input type="text" value="12" class="form-control" name="Resp" id="Resp">
                         </div>
@@ -218,8 +229,15 @@
                     </div>
 
                 </center>
-                <br> 
-
+              
+               <br> 
+              
+              <div class="pb-5 pt-3">
+                    <center>
+                        <h1>Laboratory values</h1>
+                    </center>
+                </div>
+              
                 <div class="row col-md-12 col-sm-12">
                     <div class="form-group row col-md-6 col-sm-12">
                         <label for="BaseExcess" class="col-md-8">MEASURE OF EXCESS BICARBONATE (BaseExcess):</label>
@@ -423,6 +441,12 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="pb-5 pt-3">
+                    <center>
+                        <h1>Demographics </h1>
+                    </center>
+                </div>
 
                 <div class="row col-md-12 col-sm-12">
                     <div class="form-group row col-md-6 col-sm-12">
@@ -455,7 +479,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="mt-4 mb-3">
                     <center>
                         <input type="submit" class="btn btn-dark btn-lg box-shadow--8dp" value="NEXT" onclick="WriteStorage();">
@@ -464,4 +488,6 @@
             </form>
         </div>
     </div>
-</body></html>
+</body>
+
+</html>
