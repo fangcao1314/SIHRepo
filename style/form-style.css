@@ -1,13 +1,12 @@
 body {
     background-image: linear-gradient(to right, rgba(141, 189, 250, 0.4), rgba(199, 145, 255, 0.4));
     font-family: cambria;
-    font-size: 130%;
     background-attachment: fixed;
 }
 
 label {
     text-align: left;
-    font-size: 150%;
+    font-size: 18px;
 }
 
 h1 {
@@ -63,12 +62,12 @@ h2 {
 }
 
 #banner-text{
-    background-color: #ffffffaa;
+    background-color: #ffffffcc;
     border-radius: 30px;
-    display: inline-block;
+    display: block;
     padding: 0;
-    margin: 10px 200px 30px;
     font-size: 18px;
+    width: 70%;
 }
 
 #lab-values {
@@ -153,4 +152,8 @@ h2 {
     margin: 0;
     font-size: 60px;
     font-weight: 500;
+}
+
+td{
+    width: 85%;
 }
