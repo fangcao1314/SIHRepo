@@ -1,2 +1,2 @@
 # SIHRepo
-> https://sachinverma53121.github.io/SIHRepo/sih.html
+> https://sachinverma53121.github.io/SIHRepo/index.html
