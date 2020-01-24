@@ -155,12 +155,18 @@
         console.log(jsonString);
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://sepsis-service.herokuapp.com/main");
+        xhr.open("POST", "https://sepsisapi.herokuapp.com/main");
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.onreadystatechange = function() {
             if(xhr.readyState == XMLHttpRequest.DONE) {
-                document.getElementById("result").innerHTML = "result is : "+JSON.parse(xhr.responseText)['result'];
+                console.log(JSON.parse(xhr.responseText)['result']);
+                if(JSON.parse(xhr.responseText)['result'] == "0"){
+                    document.getElementById("result").innerHTML = "Sespsis Not Detected";
+                } else {
+                    document.getElementById("result").innerHTML = "Sespsis Detected";
+                }
+                //document.getElementById("result").innerHTML = "result is : "+JSON.parse(xhr.responseText)['result'];
             }
         }
 
