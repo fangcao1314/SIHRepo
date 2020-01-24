@@ -18,6 +18,7 @@
     <!-- SCRIPTS TO SEND FORM DATA TO API AND GET THE RESULT -->
     <script type = "text/javascript">
       function ReadCookie() {
+        // document.getElementById("resulttable").style.display="";
          var age = localStorage.getItem("age");
          var gender = localStorage.getItem("gender");
          var HR = localStorage.getItem("HR");
@@ -105,6 +106,48 @@
 
         console.log(data);
 
+        //WRITE VALUES IN TABLE
+        document.getElementById("ager").innerHTML = age;
+        document.getElementById("genderr").innerHTML = gender;
+        document.getElementById("HRr").innerHTML = HR;
+        document.getElementById("O2Satr").innerHTML = O2Sat;
+        document.getElementById("Tempr").innerHTML = Temp;
+        document.getElementById("SBPr").innerHTML = SBP;
+        document.getElementById("MAPr").innerHTML = MAP;
+        document.getElementById("DBPr").innerHTML = DBP;
+        document.getElementById("Respr").innerHTML = Resp;
+        document.getElementById("EtCO2r").innerHTML = EtCO2;
+        document.getElementById("BaseExcessr").innerHTML = BaseExcess;
+        document.getElementById("HCO3r").innerHTML = HCO3;
+        document.getElementById("FiO2r").innerHTML = FiO2;
+        document.getElementById("pHr").innerHTML = pH;
+        document.getElementById("PaCO2r").innerHTML = PaCO2;
+        document.getElementById("SaO2r").innerHTML = SaO2;
+        document.getElementById("ASTr").innerHTML = AST;
+        document.getElementById("BUNr").innerHTML = BUN;
+        document.getElementById("Alkalinephosr").innerHTML = Alkalinephos;
+        document.getElementById("Calciumr").innerHTML = Calcium;
+        document.getElementById("Chlorider").innerHTML = Chloride;
+        document.getElementById("Creatininer").innerHTML = Creatinine;
+        document.getElementById("Bilirubin_directr").innerHTML = Bilirubin_direct;
+        document.getElementById("Glucoser").innerHTML = Glucose;
+        document.getElementById("Lactater").innerHTML = Lactate;
+        document.getElementById("Magnesiumr").innerHTML = Magnesium;
+        document.getElementById("Phosphater").innerHTML = Phosphate;
+        document.getElementById("Potassiumr").innerHTML = Potassium;
+        document.getElementById("BILIRUBINr").innerHTML = BILIRUBIN;
+        document.getElementById("TROPONINr").innerHTML = TROPONIN;
+        document.getElementById("Hctr").innerHTML = Hct;
+        document.getElementById("Hbr").innerHTML = Hb;
+        document.getElementById("PTTr").innerHTML = PTT;
+        document.getElementById("WBCr").innerHTML = WBC;
+        document.getElementById("FIBRINOGENr").innerHTML = FIBRINOGEN;
+        document.getElementById("PLATELATEr").innerHTML = PLATELATE;
+        document.getElementById("Unit1r").innerHTML = Unit1;
+        document.getElementById("Unit2r").innerHTML = Unit2;
+        document.getElementById("HospAdmTimer").innerHTML = HospAdmTime;
+        document.getElementById("ICULOSr").innerHTML = ICULOS;
+
         const datawithvalues = {
             "HR": 89,
             "O2Sat": 100,
@@ -152,7 +195,7 @@
 
         //POST REQUEST
         const jsonString = JSON.stringify(data);
-        console.log(jsonString);
+        // console.log(jsonString);
 
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://sepsisapi.herokuapp.com/main");
@@ -160,13 +203,13 @@
 
         xhr.onreadystatechange = function() {
             if(xhr.readyState == XMLHttpRequest.DONE) {
-                console.log(JSON.parse(xhr.responseText)['result']);
+                // console.log(JSON.parse(xhr.responseText)['result']);
+
                 if(JSON.parse(xhr.responseText)['result'] == "0"){
                     document.getElementById("result").innerHTML = "Sespsis Not Detected";
                 } else {
                     document.getElementById("result").innerHTML = "Sespsis Detected";
                 }
-                //document.getElementById("result").innerHTML = "result is : "+JSON.parse(xhr.responseText)['result'];
             }
         }
 
@@ -188,28 +231,179 @@
 
 <body class="bg-dark mystyle">
   <div id="filterresult">   
-    <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow">
+    <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow resultbox">
         <div class="pb-5 pt-3">
             <center>
                 <h1>RESULT</h1>
-                <input type="button" value="Get Result" onclick = "ReadCookie()"> <br>
-                <h3 id="result"></h3>
-                <div class="container">
-                    <table>
+                <input type="button" value="Get Result" onclick = "ReadCookie()"> <br> <br>
+                <div id="resulttable">
+                    <table border="2">
                       <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
+                        <th colspan="2"><h3 id="result">Result is : </h3></th>
+                      </tr>  
+                      <tr>
+                        <th>PATIENT'S INFO</th>
+                        <th>&emsp;VALUE&emsp;</th>
                       </tr>
                       <tr>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>50</td>
+                        <td>Age</td>
+                        <td id="ager"></td>
                       </tr>
                       <tr>
-                        <td>Eve</td>
-                        <td>Jackson</td>
-                        <td>94</td>
+                        <td>Gender</td>
+                        <td id="genderr"></td>
+                      </tr>
+                      <tr>
+                        <td>HR</td>
+                        <td id="HRr"></td>
+                      </tr>
+                      <tr>
+                        <td>O2Sat</td>
+                        <td id="O2Satr"></td>
+                      </tr>
+                      <tr>
+                        <td>Temp</td>
+                        <td id="Tempr"></td>
+                      </tr>
+                      <tr>
+                        <td>SBP</td>
+                        <td id="SBPr"></td>
+                      </tr>
+                      <tr>
+                        <td>MAP</td>
+                        <td id="MAPr"></td>
+                      </tr>
+                      <tr>
+                        <td>DBP</td>
+                        <td id="DBPr"></td>
+                      </tr>
+                      <tr>
+                        <td>Resp</td>
+                        <td id="Respr"></td>
+                      </tr>
+                      <tr>
+                        <td>EtCO2</td>
+                        <td id="EtCO2r"></td>
+                      </tr>
+                      <tr>
+                        <td>Base Excess</td>
+                        <td id="BaseExcessr"></td>
+                      </tr>
+                      <tr>
+                        <td>HCO3</td>
+                        <td id="HCO3r"></td>
+                      </tr>
+                      <tr>
+                        <td>FiO2</td>
+                        <td id="FiO2r"></td>
+                      </tr>
+                      <tr>
+                        <td>pH</td>
+                        <td id="pHr"></td>
+                      </tr>
+                      <tr>
+                        <td>PaCO2</td>
+                        <td id="PaCO2r"></td>
+                      </tr>
+                      <tr>
+                        <td>SaO2</td>
+                        <td id="SaO2r"></td>
+                      </tr>
+                      <tr>
+                        <td>AST</td>
+                        <td id="ASTr"></td>
+                      </tr>
+                      <tr>
+                        <td>BUN</td>
+                        <td id="BUNr"></td>
+                      </tr>
+                      <tr>
+                        <td>Alkalinephos</td>
+                        <td id="Alkalinephosr"></td>
+                      </tr>
+                      <tr>
+                        <td>Calcium</td>
+                        <td id="Calciumr"></td>
+                      </tr>
+                      <tr>
+                        <td>Chloride</td>
+                        <td id="Chlorider"></td>
+                      </tr>
+                      <tr>
+                        <td>Creatinine</td>
+                        <td id="Creatininer"></td>
+                      </tr>
+                      <tr>
+                        <td>&emsp;&emsp;&emsp;Bilirubin_direct&emsp;&emsp;&emsp;</td>
+                        <td id="Bilirubin_directr"></td>
+                      </tr>
+                      <tr>
+                        <td>Glucose</td>
+                        <td id="Glucoser"></td>
+                      </tr>
+                      <tr>
+                        <td>Lactate</td>
+                        <td id="Lactater"></td>
+                      </tr>
+                      <tr>
+                        <td>Magnesium</td>
+                        <td id="Magnesiumr"></td>
+                      </tr>
+                      <tr>
+                        <td>Phosphate</td>
+                        <td id="Phosphater"></td>
+                      </tr>
+                      <tr>
+                        <td>Potassium</td>
+                        <td id="Potassiumr"></td>
+                      </tr>
+                      <tr>
+                        <td>BILIRUBIN</td>
+                        <td id="BILIRUBINr"></td>
+                      </tr>
+                      <tr>
+                        <td>TROPONIN</td>
+                        <td id="TROPONINr"></td>
+                      </tr>
+                      <tr>
+                        <td>Hct</td>
+                        <td id="Hctr"></td>
+                      </tr>
+                      <tr>
+                        <td>Hb</td>
+                        <td id="Hbr"></td>
+                      </tr>
+                      <tr>
+                        <td>PTT</td>
+                        <td id="PTTr"></td>
+                      </tr>
+                      <tr>
+                        <td>WBC</td>
+                        <td id="WBCr"></td>
+                      </tr>
+                      <tr>
+                        <td>FIBRINOGEN</td>
+                        <td id="FIBRINOGENr"></td>
+                      </tr>
+                      <tr>
+                        <td>PLATELATE</td>
+                        <td id="PLATELATEr"></td>
+                      </tr>
+                      <tr>
+                        <td>Unit 1</td>
+                        <td id="Unit1r"></td>
+                      </tr>
+                      <tr>
+                        <td>Unit 2</td>
+                        <td id="Unit2r"></td>
+                      </tr>
+                      <tr>
+                        <td>HospAdmTime</td>
+                        <td id="HospAdmTimer"></td>
+                      </tr>
+                      <tr>
+                        <td>ICULOS</td>
+                        <td id="ICULOSr"></td>
                       </tr>
                     </table>
                 </div>
