@@ -7,6 +7,55 @@
     <title>LABORATORY VALUES</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SCRIPTS TO SEND FORM DATA TO NEXT PAGE -->
+    <script type = "text/javascript">
+      function WriteStorage() {
+         value =document.myform.Phosphate.value;
+         localStorage.setItem("Phosphate",value);
+
+         value =document.myform.Potassium.value;
+         localStorage.setItem("Potassium",value);
+         
+         value =document.myform.BILIRUBIN.value;
+         localStorage.setItem("BILIRUBIN",value);
+         
+         value =document.myform.TROPONIN.value;
+         localStorage.setItem("TROPONIN",value);
+         
+         value =document.myform.Hct.value;
+         localStorage.setItem("Hct",value);
+         
+         value =document.myform.Hb.value;
+         localStorage.setItem("Hb",value);
+         
+         value =document.myform.PTT.value;
+         localStorage.setItem("PTT",value);
+         
+         value =document.myform.WBC.value;
+         localStorage.setItem("WBC",value);
+         
+         value =document.myform.FIBRINOGEN.value;
+         localStorage.setItem("FIBRINOGEN",value);
+         
+         value =document.myform.PLATELATE.value;
+         localStorage.setItem("PLATELATE",value);
+         
+         value =document.myform.Unit1.value;
+         localStorage.setItem("Unit1",value);
+         
+         value =document.myform.Unit2.value;
+         localStorage.setItem("Unit2",value);
+         
+         value =document.myform.HospAdmTime.value;
+         localStorage.setItem("HospAdmTime",value);
+         
+         value =document.myform.ICULOS.value;
+         localStorage.setItem("ICULOS",value);
+         
+         window.open("res.html");
+      }
+    </script>    
 </head>
 
 <body class="bg-dark">
@@ -16,7 +65,7 @@
                 <h1>LAB &nbsp;VALUES</h1>
             </center>
         </div>
-        <form action="res.html" method="post">
+        <form name="myform">
             <div class="row col-md-12 col-sm-12">
                 <div class="form-group row col-md-6 col-sm-12">
                     <label for="Phosphate" class="col-md-8">PHOSPHATE:</label>
@@ -35,16 +84,16 @@
 
             <div class="row col-md-12 col-sm-12">
                 <div class="form-group row col-md-6 col-sm-12">
-                    <label for="TOTAL BILIRUBIN" class="col-md-8">TOTAL BILIRUBIN:</label>
+                    <label for="BILIRUBIN" class="col-md-8">TOTAL BILIRUBIN:</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" name="TOTAL BILIRUBIN" id="TOTAL BILIRUBIN">
+                        <input type="text" class="form-control" name="BILIRUBIN" id="BILIRUBIN">
                     </div>
                 </div>
 
                 <div class="form-group row col-md-6 col-sm-12">
-                    <label for="TROPONIN I" class="col-md-8">TROPONIN I:</label>
+                    <label for="TROPONIN" class="col-md-8">TROPONIN I:</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" name="TROPONIN I" id="TROPONIN I">
+                        <input type="text" class="form-control" name="TROPONIN" id="TROPONIN">
                     </div>
                 </div>
             </div>
@@ -130,7 +179,7 @@
             </div>
             <div class="mt-3 mb-5">
                 <center>
-                    <input type="submit" class="btn btn-lg btn-dark" value="SUBMIT">
+                    <input type="submit" class="btn btn-lg btn-dark" value="SUBMIT" onclick = "WriteStorage();">
                 </center>
             </div>
         </form>
