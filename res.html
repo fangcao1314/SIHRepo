@@ -186,18 +186,39 @@
    </script>    
 </head>
 
-<body class="bg-dark">
-    <div class="container col-md-9 bg-white pb-3 col-sm-11">
+<body class="bg-dark mystyle">
+  <div id="filterresult">   
+    <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow">
         <div class="pb-5 pt-3">
             <center>
                 <h1>RESULT</h1>
                 <input type="button" value="Get Result" onclick = "ReadCookie()"> <br>
                 <h3 id="result"></h3>
+                <div class="container">
+                    <table>
+                      <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                      </tr>
+                      <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                      </tr>
+                    </table>
+                </div>
             </center>
         </div>
         <div>
 
         </div>
     </div>
+  </div>   
 </body>
 </html>
