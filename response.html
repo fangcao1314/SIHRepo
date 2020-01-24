@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/form-style.css">
+    <title>RESULT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+
+
+    <!-- SCRIPTS TO SEND FORM DATA TO API AND GET THE RESULT -->
+    <script type="text/javascript">
+        function ReadCookie() {
+            // document.getElementById("resulttable").style.display="";
+            var age = localStorage.getItem("age");
+            var gender = localStorage.getItem("gender");
+            var HR = localStorage.getItem("HR");
+            var O2Sat = localStorage.getItem("O2Sat");
+            var Temp = localStorage.getItem("Temp");
+            var SBP = localStorage.getItem("SBP");
+            var MAP = localStorage.getItem("MAP");
+            var DBP = localStorage.getItem("DBP");
+            var Resp = localStorage.getItem("Resp");
+            var EtCO2 = localStorage.getItem("EtCO2");
+            var BaseExcess = localStorage.getItem("BaseExcess");
+            var HCO3 = localStorage.getItem("HCO3");
+            var FiO2 = localStorage.getItem("FiO2");
+            var pH = localStorage.getItem("pH");
+            var PaCO2 = localStorage.getItem("PaCO2");
+            var SaO2 = localStorage.getItem("SaO2");
+            var AST = localStorage.getItem("AST");
+            var BUN = localStorage.getItem("BUN");
+            var Alkalinephos = localStorage.getItem("Alkalinephos");
+            var Calcium = localStorage.getItem("Calcium");
+            var Chloride = localStorage.getItem("Chloride");
+            var Creatinine = localStorage.getItem("Creatinine");
+            var Bilirubin_direct = localStorage.getItem("Bilirubin_direct");
+            var Glucose = localStorage.getItem("Glucose");
+            var Lactate = localStorage.getItem("Lactate");
+            var Magnesium = localStorage.getItem("Magnesium");
+            var Phosphate = localStorage.getItem("Phosphate");
+            var Potassium = localStorage.getItem("Potassium");
+            var BILIRUBIN = localStorage.getItem("BILIRUBIN");
+            var TROPONIN = localStorage.getItem("TROPONIN");
+            var Hct = localStorage.getItem("Hct");
+            var Hb = localStorage.getItem("Hb");
+            var PTT = localStorage.getItem("PTT");
+            var WBC = localStorage.getItem("WBC");
+            var FIBRINOGEN = localStorage.getItem("FIBRINOGEN");
+            var PLATELATE = localStorage.getItem("PLATELATE");
+            var Unit1 = localStorage.getItem("Unit1");
+            var Unit2 = localStorage.getItem("Unit2");
+            var HospAdmTime = localStorage.getItem("HospAdmTime");
+            var ICULOS = localStorage.getItem("ICULOS");
+
+            const data = {
+                "HR": HR,
+                "O2Sat": O2Sat,
+                "Temp": Temp,
+                "SBP": SBP,
+                "MAP": MAP,
+                "DBP": DBP,
+                "Resp": Resp,
+                "EtCO2": EtCO2,
+                "BaseExcess": BaseExcess,
+                "HCO3": HCO3,
+                "FiO2": FiO2,
+                "pH": pH,
+                "PaCO2": PaCO2,
+                "SaO2": SaO2,
+                "AST": AST,
+                "BUN": BUN,
+                "Alkalinephos": Alkalinephos,
+                "Calcium": Calcium,
+                "Chloride": Chloride,
+                "Creatinine": Creatinine,
+                "Bilirubin_direct": Bilirubin_direct,
+                "Glucose": Glucose,
+                "Lactate": Lactate,
+                "Magnesium": Magnesium,
+                "Phosphate": Phosphate,
+                "Potassium": Potassium,
+                "Bilirubin_total": BILIRUBIN,
+                "TroponinI": TROPONIN,
+                "Hct": Hct,
+                "Hgb": Hb,
+                "PTT": PTT,
+                "WBC": WBC,
+                "Fibrinogen": FIBRINOGEN,
+                "Platelets": PLATELATE,
+                "Age": age,
+                "Gender": gender,
+                "Unit1": Unit1,
+                "Unit2": Unit2,
+                "HospAdmTime": HospAdmTime,
+                "ICULOS": ICULOS
+            };
+
+            console.log(data);
+
+            //WRITE VALUES IN TABLE
+            document.getElementById("ager").innerHTML = age;
+            document.getElementById("genderr").innerHTML = gender;
+            document.getElementById("HRr").innerHTML = HR;
+            document.getElementById("O2Satr").innerHTML = O2Sat;
+            document.getElementById("Tempr").innerHTML = Temp;
+            document.getElementById("SBPr").innerHTML = SBP;
+            document.getElementById("MAPr").innerHTML = MAP;
+            document.getElementById("DBPr").innerHTML = DBP;
+            document.getElementById("Respr").innerHTML = Resp;
+            document.getElementById("EtCO2r").innerHTML = EtCO2;
+            document.getElementById("BaseExcessr").innerHTML = BaseExcess;
+            document.getElementById("HCO3r").innerHTML = HCO3;
+            document.getElementById("FiO2r").innerHTML = FiO2;
+            document.getElementById("pHr").innerHTML = pH;
+            document.getElementById("PaCO2r").innerHTML = PaCO2;
+            document.getElementById("SaO2r").innerHTML = SaO2;
+            document.getElementById("ASTr").innerHTML = AST;
+            document.getElementById("BUNr").innerHTML = BUN;
+            document.getElementById("Alkalinephosr").innerHTML = Alkalinephos;
+            document.getElementById("Calciumr").innerHTML = Calcium;
+            document.getElementById("Chlorider").innerHTML = Chloride;
+            document.getElementById("Creatininer").innerHTML = Creatinine;
+            document.getElementById("Bilirubin_directr").innerHTML = Bilirubin_direct;
+            document.getElementById("Glucoser").innerHTML = Glucose;
+            document.getElementById("Lactater").innerHTML = Lactate;
+            document.getElementById("Magnesiumr").innerHTML = Magnesium;
+            document.getElementById("Phosphater").innerHTML = Phosphate;
+            document.getElementById("Potassiumr").innerHTML = Potassium;
+            document.getElementById("BILIRUBINr").innerHTML = BILIRUBIN;
+            document.getElementById("TROPONINr").innerHTML = TROPONIN;
+            document.getElementById("Hctr").innerHTML = Hct;
+            document.getElementById("Hbr").innerHTML = Hb;
+            document.getElementById("PTTr").innerHTML = PTT;
+            document.getElementById("WBCr").innerHTML = WBC;
+            document.getElementById("FIBRINOGENr").innerHTML = FIBRINOGEN;
+            document.getElementById("PLATELATEr").innerHTML = PLATELATE;
+            document.getElementById("Unit1r").innerHTML = Unit1;
+            document.getElementById("Unit2r").innerHTML = Unit2;
+            document.getElementById("HospAdmTimer").innerHTML = HospAdmTime;
+            document.getElementById("ICULOSr").innerHTML = ICULOS;
+
+            const datawithvalues = {
+                "HR": 89,
+                "O2Sat": 100,
+                "Temp": 0,
+                "SBP": 113,
+                "MAP": 82,
+                "DBP": 71,
+                "Resp": 12,
+                "EtCO2": 0,
+                "BaseExcess": 0,
+                "HCO3": 0,
+                "FiO2": 0,
+                "pH": 0,
+                "PaCO2": 0,
+                "SaO2": 0,
+                "AST": 0,
+                "BUN": 0,
+                "Alkalinephos": 0,
+                "Calcium": 0,
+                "Chloride": 0,
+                "Creatinine": 0,
+                "Bilirubin_direct": 0,
+                "Glucose": 0,
+                "Lactate": 0,
+                "Magnesium": 0,
+                "Phosphate": 0,
+                "Potassium": 0,
+                "Bilirubin_total": 0,
+                "TroponinI": 0,
+                "Hct": 0,
+                "Hgb": 0,
+                "PTT": 0,
+                "WBC": 0,
+                "Fibrinogen": 0,
+                "Platelets": 0,
+                "Age": 45,
+                "Gender": 1,
+                "Unit1": 1,
+                "Unit2": 0,
+                "HospAdmTime": -4.84,
+                "ICULOS": 10
+            }
+
+
+
+            //POST REQUEST
+            const jsonString = JSON.stringify(data);
+            // console.log(jsonString);
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://sepsis-prediction.herokuapp.com/prediction");
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    // console.log(JSON.parse(xhr.responseText)['result']);
+                    //
+                    //                    if (JSON.parse(xhr.responseText)['result'] == "0") {
+                    //                        //                        document.getElementById("result").innerHTML = "Sespsis Not Detected";
+                    //                        //                    } else {
+                    //                        //                        document.getElementById("result").innerHTML = "Sespsis Detected";
+                    //                        //                    }
+                    //                        document.getElementById("result").innerHTML = JSON.parse(xhr.responseText)['prediction']
+                    //
+                    //
+                    //                    }
+
+
+                    if (JSON.parse(xhr.responseText)['prediction'] < 0.5) {
+                        document.getElementById("result").innerHTML = "Sespsis Not Detected";
+                    } else {
+                        document.getElementById("result").innerHTML = "Sespsis Detected";
+                    }
+                }
+            }
+
+            xhr.send(jsonString);
+            console.log("success");
+        }
+
+    </script>
+</head>
+
+<body class="bg-dark mystyle">
+    <div id="filterresult">
+        <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow resultbox">
+            <div class="pb-5 pt-3">
+                <center>
+                    <h1>RESULT</h1>
+                    <input type="button" value="Get Result" onclick="ReadCookie()"> <br> <br>
+                    <div id="resulttable">
+                        <table border="2">
+                            <tr>
+                                <th colspan="2">
+                                    <h3 id="result">Result is : </h3>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>PATIENT'S INFO</th>
+                                <th>&emsp;VALUE&emsp;</th>
+                            </tr>
+                            <tr>
+                                <td>Age</td>
+                                <td id="ager"></td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td id="genderr"></td>
+                            </tr>
+                            <tr>
+                                <td>HR</td>
+                                <td id="HRr"></td>
+                            </tr>
+                            <tr>
+                                <td>O2Sat</td>
+                                <td id="O2Satr"></td>
+                            </tr>
+                            <tr>
+                                <td>Temp</td>
+                                <td id="Tempr"></td>
+                            </tr>
+                            <tr>
+                                <td>SBP</td>
+                                <td id="SBPr"></td>
+                            </tr>
+                            <tr>
+                                <td>MAP</td>
+                                <td id="MAPr"></td>
+                            </tr>
+                            <tr>
+                                <td>DBP</td>
+                                <td id="DBPr"></td>
+                            </tr>
+                            <tr>
+                                <td>Resp</td>
+                                <td id="Respr"></td>
+                            </tr>
+                            <tr>
+                                <td>EtCO2</td>
+                                <td id="EtCO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>Base Excess</td>
+                                <td id="BaseExcessr"></td>
+                            </tr>
+                            <tr>
+                                <td>HCO3</td>
+                                <td id="HCO3r"></td>
+                            </tr>
+                            <tr>
+                                <td>FiO2</td>
+                                <td id="FiO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>pH</td>
+                                <td id="pHr"></td>
+                            </tr>
+                            <tr>
+                                <td>PaCO2</td>
+                                <td id="PaCO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>SaO2</td>
+                                <td id="SaO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>AST</td>
+                                <td id="ASTr"></td>
+                            </tr>
+                            <tr>
+                                <td>BUN</td>
+                                <td id="BUNr"></td>
+                            </tr>
+                            <tr>
+                                <td>Alkalinephos</td>
+                                <td id="Alkalinephosr"></td>
+                            </tr>
+                            <tr>
+                                <td>Calcium</td>
+                                <td id="Calciumr"></td>
+                            </tr>
+                            <tr>
+                                <td>Chloride</td>
+                                <td id="Chlorider"></td>
+                            </tr>
+                            <tr>
+                                <td>Creatinine</td>
+                                <td id="Creatininer"></td>
+                            </tr>
+                            <tr>
+                                <td>Bilirubin_direct&emsp;&emsp;&emsp;</td>
+                                <td id="Bilirubin_directr"></td>
+                            </tr>
+                            <tr>
+                                <td>Glucose</td>
+                                <td id="Glucoser"></td>
+                            </tr>
+                            <tr>
+                                <td>Lactate</td>
+                                <td id="Lactater"></td>
+                            </tr>
+                            <tr>
+                                <td>Magnesium</td>
+                                <td id="Magnesiumr"></td>
+                            </tr>
+                            <tr>
+                                <td>Phosphate</td>
+                                <td id="Phosphater"></td>
+                            </tr>
+                            <tr>
+                                <td>Potassium</td>
+                                <td id="Potassiumr"></td>
+                            </tr>
+                            <tr>
+                                <td>BILIRUBIN</td>
+                                <td id="BILIRUBINr"></td>
+                            </tr>
+                            <tr>
+                                <td>TROPONIN</td>
+                                <td id="TROPONINr"></td>
+                            </tr>
+                            <tr>
+                                <td>Hct</td>
+                                <td id="Hctr"></td>
+                            </tr>
+                            <tr>
+                                <td>Hb</td>
+                                <td id="Hbr"></td>
+                            </tr>
+                            <tr>
+                                <td>PTT</td>
+                                <td id="PTTr"></td>
+                            </tr>
+                            <tr>
+                                <td>WBC</td>
+                                <td id="WBCr"></td>
+                            </tr>
+                            <tr>
+                                <td>FIBRINOGEN</td>
+                                <td id="FIBRINOGENr"></td>
+                            </tr>
+                            <tr>
+                                <td>PLATELATE</td>
+                                <td id="PLATELATEr"></td>
+                            </tr>
+                            <tr>
+                                <td>Unit 1</td>
+                                <td id="Unit1r"></td>
+                            </tr>
+                            <tr>
+                                <td>Unit 2</td>
+                                <td id="Unit2r"></td>
+                            </tr>
+                            <tr>
+                                <td>HospAdmTime</td>
+                                <td id="HospAdmTimer"></td>
+                            </tr>
+                            <tr>
+                                <td>ICULOS</td>
+                                <td id="ICULOSr"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </center>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
