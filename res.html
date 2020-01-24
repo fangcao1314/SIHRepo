@@ -7,53 +7,176 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+
+
     <!-- SCRIPTS TO SEND FORM DATA TO API AND GET THE RESULT -->
-      <script type = "text/javascript">
+    <script type = "text/javascript">
       function ReadCookie() {
-         document.getElementById("result").innerHTML = "Loading Result";
-         setTimeout(function(){
-             document.write (localStorage.getItem("age"));
-             document.write (localStorage.getItem("gender"));
-             document.write (localStorage.getItem("HR"));
-             document.write (localStorage.getItem("O2Sat"));
-             document.write (localStorage.getItem("Temp"));
-             document.write (localStorage.getItem("SBP"));
-             document.write (localStorage.getItem("MAP"));
-             document.write (localStorage.getItem("DBP"));
-             document.write (localStorage.getItem("Resp"));
-             document.write (localStorage.getItem("EtCO2"));
-             document.write (localStorage.getItem("BaseExcess"));
-             document.write (localStorage.getItem("HCO3"));
-             document.write (localStorage.getItem("FiO2"));
-             document.write (localStorage.getItem("pH"));
-             document.write (localStorage.getItem("PaCO2"));
-             document.write (localStorage.getItem("SaO2"));
-             document.write (localStorage.getItem("AST"));
-             document.write (localStorage.getItem("BUN"));
-             document.write (localStorage.getItem("Alkalinephos"));
-             document.write (localStorage.getItem("Calcium"));
-             document.write (localStorage.getItem("Chloride"));
-             document.write (localStorage.getItem("Creatinine"));
-             document.write (localStorage.getItem("Bilirubin_direct"));
-             document.write (localStorage.getItem("Glucose"));
-             document.write (localStorage.getItem("Lactate"));
-             document.write (localStorage.getItem("Magnesium"));
-             document.write (localStorage.getItem("Phosphate"));
-             document.write (localStorage.getItem("Potassium"));
-             document.write (localStorage.getItem("BILIRUBIN"));
-             document.write (localStorage.getItem("TROPONIN"));
-             document.write (localStorage.getItem("Hct"));
-             document.write (localStorage.getItem("Hb"));
-             document.write (localStorage.getItem("PTT"));
-             document.write (localStorage.getItem("WBC"));
-             document.write (localStorage.getItem("FIBRINOGEN"));
-             document.write (localStorage.getItem("PLATELATE"));
-             document.write (localStorage.getItem("Unit1"));
-             document.write (localStorage.getItem("Unit2"));
-             document.write (localStorage.getItem("HospAdmTime"));
-             document.write (localStorage.getItem("ICULOS"));
-         },2000);
+         var age = localStorage.getItem("age");
+         var gender = localStorage.getItem("gender");
+         var HR = localStorage.getItem("HR");
+         var O2Sat = localStorage.getItem("O2Sat");
+         var Temp = localStorage.getItem("Temp");
+         var SBP = localStorage.getItem("SBP");
+         var MAP = localStorage.getItem("MAP");
+         var DBP = localStorage.getItem("DBP");
+         var Resp = localStorage.getItem("Resp");
+         var EtCO2 = localStorage.getItem("EtCO2");
+         var BaseExcess = localStorage.getItem("BaseExcess");
+         var HCO3 = localStorage.getItem("HCO3");
+         var FiO2 = localStorage.getItem("FiO2");
+         var pH = localStorage.getItem("pH");
+         var PaCO2 = localStorage.getItem("PaCO2");
+         var SaO2 = localStorage.getItem("SaO2");
+         var AST = localStorage.getItem("AST");
+         var BUN = localStorage.getItem("BUN");
+         var Alkalinephos = localStorage.getItem("Alkalinephos");
+         var Calcium = localStorage.getItem("Calcium");
+         var Chloride = localStorage.getItem("Chloride");
+         var Creatinine = localStorage.getItem("Creatinine");
+         var Bilirubin_direct = localStorage.getItem("Bilirubin_direct");
+         var Glucose = localStorage.getItem("Glucose");
+         var Lactate = localStorage.getItem("Lactate");
+         var Magnesium = localStorage.getItem("Magnesium");
+         var Phosphate = localStorage.getItem("Phosphate");
+         var Potassium = localStorage.getItem("Potassium");
+         var BILIRUBIN = localStorage.getItem("BILIRUBIN");
+         var TROPONIN = localStorage.getItem("TROPONIN");
+         var Hct = localStorage.getItem("Hct");
+         var Hb = localStorage.getItem("Hb");
+         var PTT = localStorage.getItem("PTT");
+         var WBC = localStorage.getItem("WBC");
+         var FIBRINOGEN = localStorage.getItem("FIBRINOGEN");
+         var PLATELATE = localStorage.getItem("PLATELATE");
+         var Unit1 = localStorage.getItem("Unit1");
+         var Unit2 = localStorage.getItem("Unit2");
+         var HospAdmTime = localStorage.getItem("HospAdmTime");
+         var ICULOS = localStorage.getItem("ICULOS");
+
+         const data = 
+         {
+            "HR": HR,
+            "O2Sat": O2Sat,
+            "Temp": Temp,
+            "SBP": SBP,
+            "MAP": MAP,
+            "DBP": DBP,
+            "Resp": Resp,
+            "EtCO2": EtCO2,
+            "BaseExcess": BaseExcess,
+            "HCO3": HCO3,
+            "FiO2": FiO2,
+            "pH": pH,
+            "PaCO2": PaCO2,
+            "SaO2": SaO2,
+            "AST": AST,
+            "BUN": BUN,
+            "Alkalinephos": Alkalinephos,
+            "Calcium": Calcium,
+            "Chloride": Chloride,
+            "Creatinine": Creatinine,
+            "Bilirubin_direct": Bilirubin_direct,
+            "Glucose": Glucose,
+            "Lactate": Lactate,
+            "Magnesium": Magnesium,
+            "Phosphate": Phosphate,
+            "Potassium": Potassium,
+            "Bilirubin_total": BILIRUBIN,
+            "TroponinI": TROPONIN,
+            "Hct": Hct,
+            "Hgb": Hb,
+            "PTT": PTT,
+            "WBC": WBC,
+            "Fibrinogen": FIBRINOGEN,
+            "Platelets": PLATELATE,
+            "Age": age,
+            "Gender": gender,
+            "Unit1": Unit1,
+            "Unit2": Unit2,
+            "HospAdmTime": HospAdmTime,
+            "ICULOS": ICULOS
+        };
+
+        console.log(data);
+
+        const datawithvalues = {
+            "HR": 89,
+            "O2Sat": 100,
+            "Temp": 0,
+            "SBP": 113,
+            "MAP": 82,
+            "DBP": 71,
+            "Resp": 12,
+            "EtCO2": 0,
+            "BaseExcess": 0,
+            "HCO3": 0,
+            "FiO2": 0,
+            "pH": 0,
+            "PaCO2": 0,
+            "SaO2": 0,
+            "AST": 0,
+            "BUN": 0,
+            "Alkalinephos": 0,
+            "Calcium": 0,
+            "Chloride": 0,
+            "Creatinine": 0,
+            "Bilirubin_direct": 0,
+            "Glucose": 0,
+            "Lactate": 0,
+            "Magnesium": 0,
+            "Phosphate": 0,
+            "Potassium": 0,
+            "Bilirubin_total": 0,
+            "TroponinI": 0,
+            "Hct": 0,
+            "Hgb": 0,
+            "PTT": 0,
+            "WBC": 0,
+            "Fibrinogen": 0,
+            "Platelets": 0,
+            "Age": 45,
+            "Gender": 1,
+            "Unit1": 1,
+            "Unit2": 0,
+            "HospAdmTime": -4.84,
+            "ICULOS": 10
+        }
+
+
+
+        //POST REQUEST
+        const jsonString = JSON.stringify(data);
+        console.log(jsonString);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://sepsis-service.herokuapp.com/main");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == XMLHttpRequest.DONE) {
+                document.getElementById("result").innerHTML = "result is : "+JSON.parse(xhr.responseText)['result'];
+            }
+        }
+
+        xhr.send(jsonString);
+        console.log("success");  
+
+
+
+      // // GET REQUEST
+      //    $.get("https://sepsis-service.herokuapp.com/getter", function(data, status){
+      //       console.log("Data: " + JSON.stringify(data));
+      //       console.log("Status: " + status);
+      //     });      
+      //    document.getElementById("result").innerHTML = "Result Captured ";
       }
+
    </script>    
 </head>
 
