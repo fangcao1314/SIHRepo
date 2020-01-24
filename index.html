@@ -148,70 +148,71 @@
     </div>
 
     <div id="filter">
-           <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow coolstyle">
-            <div class="container">
+
+        <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow">
+            <div class="pl-5 pt-5">
                 You have to input the data of the patient in the following form, You can leave the some fields as blank if you doesn't know the answer.
                 <br>
                 <b>Please Note => the accuracy of the prediction will decrease if you doen't provide enough information</b>
             </div>
-           
-            <form name="myform">
+
+            <form name="myform" class="pl-4">
                 <div class="border border-white">
                     <hr>
                     <h2>VITAL SIGNS</h2>
                     <hr>
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="email-id" class="col-md-8">HEART RATE(HR):</label>
+                            <label for="email-id" class="col-md-8">Heart rate (beats per minute):</label>
                             <div class="col md-4">
                                 <input type="text" value="89" class="form-control" name="HR" id="HR">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="O2Sat" class="col-md-8">PULSE OXIMETRY(O2Sat):</label>
+                            <label for="O2Sat" class="col-md-8">Pulse oximetry (%):</label>
                             <div class="col md-4">
                                 <input type="text" value="100" class="form-control" name="O2Sat" id="O2Sat">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Temp" class="col-md-8">TEMPERATURE(Temp):</label>
+                            <label for="Temp" class="col-md-8">Temprature (Deg C):</label>
                             <div class="col md-4">
-                                    <input type="text" value="0" class="form-control" name="Temp" id="Temp">
+                                <input type="text" value="0" class="form-control" name="Temp" id="Temp">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="SBP" class="col-md-8">SYSTOLIC BP(SBP):</label>
+                            <label for="SBP" class="col-md-8">Systolic BP (mm Hg):</label>
                             <div class="col md-4">
                                 <input type="text" value="113" class="form-control" name="SBP" id="SBP">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="MAP" class="col-md-8">MEAN ARTERIAL PRESSURE(MAP):</label>
+                            <label for="MAP" class="col-md-8">Mean arterial pressure (mm Hg):</label>
                             <div class="col md-4">
                                 <input type="text" value="82" class="form-control" name="MAP" id="MAP">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="DBP" class="col-md-8">DIASTOLIC BP(DBP):</label>
+                            <label for="DBP" class="col-md-8">Diastolic BP (mm Hg):</label>
                             <div class="col md-4">
                                 <input type="text" value="71" class="form-control" name="DBP" id="DBP">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Resp" class="col-md-8">RESPIRATION RATE(Resp):</label>
+                            <label for="Resp" class="col-md-8">Respiration Rate (breaths per minute):</label>
                             <div class="col md-4">
                                 <input type="text" value="12" class="form-control" name="Resp" id="Resp">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="EtCO2" class="col-md-8">END TIDAL CO2(EtCO2):</label>
+                            <label for="EtCO2" class="col-md-8">End tidal CO2 (mm Hg):</label>
                             <div class="col md-4">
                                 <input type="text" value="0" class="form-control" name="EtCO2" id="EtCO2">
                             </div>
@@ -230,14 +231,14 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="BaseExcess" class="col-md-8">MEASURE OF EXCESS BICARBONATE (BaseExcess):</label>
+                            <label for="BaseExcess" class="col-md-8">Measure of excess bicarbonate (mmol/L):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="BaseExcess" id="BaseExcess">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="HCO3" class="col-md-8">BICARBONATE (HCO3):</label>
+                            <label for="HCO3" class="col-md-8">Bicarbonate (mmol/L):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="HCO3" id="HCO3">
                             </div>
@@ -246,7 +247,7 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="FiO2" class="col-md-8">FRACTION OF INSPIRED OXYGEN:</label>
+                            <label for="FiO2" class="col-md-8">Fraction of inspired oxygen (%):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="FiO2" id="FiO2">
                             </div>
@@ -262,14 +263,14 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="PaCO2" class="col-md-8">PARTIAL PRESSURE OF CO2 IN ARTERIAL BLOOD (PaCO2):</label>
+                            <label for="PaCO2" class="col-md-8">Partial pressure of CO2 from arterial blood (mm Hg):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="PaCO2" id="PaCO2">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="SaO2" class="col-md-8">OXYGEN SATURATION OF ARTERIAL BLOOD (SaO2):</label>
+                            <label for="SaO2" class="col-md-8">Oxygen saturation of arterial blood (%):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="SaO2" id="SaO2">
                             </div>
@@ -278,13 +279,13 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="AST" class="col-md-8">ASPARTATE TRANSAMINASE (AST):</label>
+                            <label for="AST" class="col-md-8">Aspartate transaminase (%):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="AST" id="AST">
                             </div>
                         </div>
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="BUN" class="col-md-8">BLOOD UREA NITROGEN (BUN):</label>
+                            <label for="BUN" class="col-md-8">Blood urea nitrogen (mg/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="BUN" id="BUN">
                             </div>
@@ -293,13 +294,13 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Alkalinephos" class="col-md-8">ALKALINE PHOSPHATE (Alkalinephos):</label>
+                            <label for="Alkalinephos" class="col-md-8">Alkaline Phosphate (IU/L):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Alkalinephos" id="Alkalinephos">
                             </div>
                         </div>
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Calcium" class="col-md-8">CALCIUM:</label>
+                            <label for="Calcium" class="col-md-8">Calcium (mg/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Calcium" id="Calcium">
                             </div>
@@ -308,13 +309,13 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Chloride" class="col-md-8">CHLORIDE:</label>
+                            <label for="Chloride" class="col-md-8">Chloride (mmol/L):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Chloride" id="Chloride">
                             </div>
                         </div>
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Creatinine" class="col-md-8">CREATININE:</label>
+                            <label for="Creatinine" class="col-md-8">Creatinine (mg/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Creatinine" id="Creatinine">
                             </div>
@@ -323,13 +324,30 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Bilirubin_direct" class="col-md-8">BILIRUBIN DIRECT:</label>
+                            <label for="Bilirubin_direct" class="col-md-8">Bilirubin direct (mg/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Bilirubin_direct" id="Bilirubin_direct">
                             </div>
                         </div>
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Magnesium" class="col-md-8">MAGNESIUM:</label>
+                            <label for="Glucose" class="col-md-8">Serum glocuse (mg/dL):</label>
+                            <div class="col-md-4">
+                                <input type="text" value="0" class="form-control" name="Glucose" id="Glucose">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row col-md-12 col-sm-12">
+
+                        <div class="form-group row col-md-6 col-sm-12">
+                            <label for="Lactate" class="col-md-8">Lactic acid (mg/dL):</label>
+                            <div class="col-md-4">
+                                <input type="text" value="0" class="form-control" name="Lactate" id="Lactate">
+                            </div>
+                        </div>
+
+                        <div class="form-group row col-md-6 col-sm-12">
+                            <label for="Magnesium" class="col-md-8">Magnesium (mmol/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Magnesium" id="Magnesium">
                             </div>
@@ -338,30 +356,14 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Glucose" class="col-md-8">SERUM GLUCOSE(Glucose):</label>
-                            <div class="col-md-4">
-                                <input type="text" value="0" class="form-control" name="Glucose" id="Glucose">
-                            </div>
-                        </div>
-
-                        <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Lactate" class="col-md-8">LACTIC ACID:</label>
-                            <div class="col-md-4">
-                                <input type="text" value="0" class="form-control" name="Lactate" id="Lactate">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row col-md-12 col-sm-12">
-                        <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Phosphate" class="col-md-8">PHOSPHATE:</label>
+                            <label for="Phosphate" class="col-md-8">Phosphate (mg/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Phosphate" id="Phosphate">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Potassium" class="col-md-8">POTASSIUM:</label>
+                            <label for="Potassium" class="col-md-8">Potassium (mmol/L):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Potassium" id="Potassium">
                             </div>
@@ -370,14 +372,14 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="BILIRUBIN" class="col-md-8">TOTAL BILIRUBIN:</label>
+                            <label for="BILIRUBIN" class="col-md-8">Total bilirubin (mg/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="BILIRUBIN" id="BILIRUBIN">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="TROPONIN" class="col-md-8">TROPONIN I:</label>
+                            <label for="TROPONIN" class="col-md-8">Troponin I (ng/mL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="TROPONIN" id="TROPONIN">
                             </div>
@@ -386,14 +388,14 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Hct" class="col-md-8">HEMATOCRIT:</label>
+                            <label for="Hct" class="col-md-8">Hematocrit (%):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Hct" id="Hct">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="Hb" class="col-md-8">HAEMOGLOBIN(Hb):</label>
+                            <label for="Hb" class="col-md-8">Haemoglobin (g/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="Hb" id="Hb">
                             </div>
@@ -402,14 +404,14 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="PTT" class="col-md-8">PARTIAL THROMBOPLASTIN TIME(PTT):</label>
+                            <label for="PTT" class="col-md-8">Partial thromboplastin time (seconds):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="PTT" id="PTT">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="WBC" class="col-md-8">LEUCOCYTE COUNT:</label>
+                            <label for="WBC" class="col-md-8">Leukocyte count (count*10<sup>3</sup>/&#181;L):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="WBC" id="WBC">
                             </div>
@@ -418,14 +420,14 @@
 
                     <div class="row col-md-12 col-sm-12">
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="FIBRINOGEN" class="col-md-8">FIBRINOGEN:</label>
+                            <label for="FIBRINOGEN" class="col-md-8">Fibrinogen (mg/dL):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="FIBRINOGEN" id="FIBRINOGEN">
                             </div>
                         </div>
 
                         <div class="form-group row col-md-6 col-sm-12">
-                            <label for="PLATELATE" class="col-md-8">PLATELATE:</label>
+                            <label for="PLATELATE" class="col-md-8">Platelets (count*10<sup>3</sup>/&#181;L):</label>
                             <div class="col-md-4">
                                 <input type="text" value="0" class="form-control" name="PLATELATE" id="PLATELATE">
                             </div>
@@ -437,17 +439,37 @@
                 <hr>
                 <h2>Demographics</h2>
                 <hr>
-
+                
                 <div class="row col-md-12 col-sm-12">
                     <div class="form-group row col-md-6 col-sm-12">
-                        <label for="Unit1" class="col-md-8">ADMINISTRATIVE UNIT1 FOR ICU(MICU):</label>
+                        <label for="age" class="col-md-8">Age (in Years):</label>
+                        <div class="col md-4">
+                            <input type="text" value="45" class="form-control" name="age" id="age">
+                        </div>
+                    </div>
+
+                    <div class="form-group row col-md-6 col-sm-12">
+                        <label for="gender" class="col-md-8">Gender:</label>
+                        <div class="col md-4">
+                            <select class="form-control" name="gender" id="gender">
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+<!--                            <input type="text" value="1" class="form-control" name="gender" id="gender">-->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row col-md-12 col-sm-12">
+                    <div class="form-group row col-md-6 col-sm-12">
+                        <label for="Unit1" class="col-md-8">Administrative Identifier for ICU unit (MICU):</label>
                         <div class="col-md-4">
                             <input type="text" value="1" class="form-control" name="Unit1" id="Unit1">
                         </div>
                     </div>
 
                     <div class="form-group row col-md-6 col-sm-12">
-                        <label for="Unit2" class="col-md-8">ADMINISTRATIVE UNIT2 FOR ICU(MICU):</label>
+                        <label for="Unit2" class="col-md-8">Administrative Identifier for ICU unit (SICU):</label>
                         <div class="col-md-4">
                             <input type="text" value="0" class="form-control" name="Unit2" id="Unit2">
                         </div>
@@ -455,30 +477,15 @@
                 </div>
 
                 <div class="row col-md-12 col-sm-12">
-
                     <div class="form-group row col-md-6 col-sm-12">
-                        <label for="age" class="col-md-8">AGE:</label>
-                        <div class="col md-4">
-                            <input type="text" value="45" class="form-control" name="age" id="age">
-                        </div>
-                    </div>
-
-                    <div class="form-group row col-md-6 col-sm-12">
-                        <label for="gender" class="col-md-8">GENDER:</label>
-                        <div class="col md-4">
-                            <input type="text" value="1" class="form-control" name="gender" id="gender">
-                        </div>
-                    </div>
-
-                    <div class="form-group row col-md-6 col-sm-12">
-                        <label for="HospAdmTime" class="col-md-8">HOURS BETWEEN HOSPITAL ADMIT AND ICU ADMIT:</label>
+                        <label for="HospAdmTime" class="col-md-8">Hours between hospital admit and ICU admit:</label>
                         <div class="col-md-4">
                             <input type="text" value="-4.84" class="form-control" name="HospAdmTime" id="HospAdmTime">
                         </div>
                     </div>
 
                     <div class="form-group row col-md-6 col-sm-12">
-                        <label for="ICULOS" class="col-md-8">ICU LENGTH OF STAY(ICULOS):</label>
+                        <label for="ICULOS" class="col-md-8">ICU length-of-stay(hours):</label>
                         <div class="col-md-4">
                             <input type="text" value="10" class="form-control" name="ICULOS" id="ICULOS">
                         </div>

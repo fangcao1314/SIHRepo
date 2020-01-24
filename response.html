@@ -105,7 +105,10 @@
 
             //WRITE VALUES IN TABLE
             document.getElementById("ager").innerHTML = age;
-            document.getElementById("genderr").innerHTML = gender;
+            if(gender == 1)
+                document.getElementById("genderr").innerHTML ="Male";
+            else
+                document.getElementById("genderr").innerHTML = "Female";
             document.getElementById("HRr").innerHTML = HR;
             document.getElementById("O2Satr").innerHTML = O2Sat;
             document.getElementById("Tempr").innerHTML = Temp;
@@ -228,180 +231,189 @@
     </script>
 </head>
 
-<body class="bg-dark mystyle">
+    <body class="bg-dark mystyle">
+   
+    <!-- this is just jumbotrone -->
+    <div class="jumbotron jumbotron-fluid mb-0" id="banner">
+        <div class="container" id="banner-text">
+            <h1 class="ml-5">Sepsis Disease Prediction</h1>
+            <p class=" text-s ml-5">We are glad that you came here</p>
+        </div>
+    </div>
+   
     <div id="filter">
-        <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow resultbox coolstyle">
+        <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow resultbox">
             <div class="pb-5 pt-3">
                 <center>
                     <h1>RESULT</h1>
                     <input type="button" class="btn btn-dark btn-lg box-shadow--8dp btnclass" value="Get Result" onclick="ReadCookie()"> <br> <br>
                     <div id="resulttable">
-                        <table border="2" style="text-align: center; font-size:150%;">
+                        <table border="2" style="text-align: center; font-size:150%; display: inline-block;">
                             <tr>
-                                <th colspan="2"><h3 id="result">Result is : </h3></th>
+                                <th colspan="2"><h3 id="result">Click Above Button to generate result</h3></th>
                             </tr>  
                             <tr>
-                                <th>PATIENT'S INFO</th>
+                                <th>Patient's Info</th>
                                 <th>&emsp;VALUE&emsp;</th>
                             </tr>
                             <tr>
-                                <td>Age</td>
+                                <td>Age (in Years):</td>
                                 <td id="ager"></td>
                             </tr>
                             <tr>
-                                <td>Gender</td>
+                                <td>Gender:</td>
                                 <td id="genderr"></td>
                             </tr>
                             <tr>
-                                <td>Heart Rate</td>
+                                <td>Heart rate (beats per minute):</td>
                                 <td id="HRr"></td>
                             </tr>
                             <tr>
-                                <td>Pulse Oximetry</td>
+                                <td>Pulse oximetry (%):</td>
                                 <td id="O2Satr"></td>
                             </tr>
                             <tr>
-                                <td>Temperature</td>
+                                <td>Temprature (Deg C):</td>
                                 <td id="Tempr"></td>
                             </tr>
                             <tr>
-                                <td>Systolic BP</td>
+                                <td>Systolic BP (mm Hg):</td>
                                 <td id="SBPr"></td>
                             </tr>
                             <tr>
-                                <td>Mean Arterial Pressure</td>
+                                <td>Mean arterial pressure (mm Hg):</td>
                                 <td id="MAPr"></td>
                             </tr>
                             <tr>
-                                <td>Diastolic BP</td>
+                                <td>Diastolic BP (mm Hg):</td>
                                 <td id="DBPr"></td>
                             </tr>
                             <tr>
-                                <td>Respiration Error</td>
+                                <td>Respiration Rate (breaths per minute):</td>
                                 <td id="Respr"></td>
                             </tr>
                             <tr>
-                                <td>End Tidal CO2</td>
+                                <td>End tidal CO2 (mm Hg):</td>
                                 <td id="EtCO2r"></td>
                             </tr>
                             <tr>
-                                <td>&emsp;Measure of Excess Bicarbonate&emsp;</td>
+                                <td>Measure of excess bicarbonate (mmol/L)</td>
                                 <td id="BaseExcessr"></td>
                             </tr>
                             <tr>
-                                <td>Bicarbonate</td>
+                                <td>Bicarbonate (mmol/L):</td>
                                 <td id="HCO3r"></td>
                             </tr>
                             <tr>
-                                <td>Fraction of Inspired Oxygen</td>
+                                <td>Fraction of inspired oxygen (%):</td>
                                 <td id="FiO2r"></td>
                             </tr>
                             <tr>
-                                <td>pH</td>
+                                <td>pH:</td>
                                 <td id="pHr"></td>
                             </tr>
                             <tr>
-                                <td>Partial Pressure of CO2 <br> in Arterial Blood</td>
+                                <td>Partial pressure of CO2 from arterial blood (mm Hg):</td>
                                 <td id="PaCO2r"></td>
                             </tr>
                             <tr>
-                                <td>Oxygen Saturation of <br> Arterial Blood</td>
+                                <td>Oxygen saturation of arterial blood (%):</td>
                                 <td id="SaO2r"></td>
                             </tr>
                             <tr>
-                                <td>Aspartate Transaminase</td>
+                                <td>Aspartate transaminase (%):</td>
                                 <td id="ASTr"></td>
                             </tr>
                             <tr>
-                                <td>Blood Urea Nitrogen</td>
+                                <td>Blood urea nitrogen (mg/dL):</td>
                                 <td id="BUNr"></td>
                             </tr>
                             <tr>
-                                <td>Alkaline Phosphate</td>
+                                <td>Alkaline Phosphate (IU/L):</td>
                                 <td id="Alkalinephosr"></td>
                             </tr>
                             <tr>
-                                <td>Calcium</td>
+                                <td>Calcium (mg/dL):</td>
                                 <td id="Calciumr"></td>
                             </tr>
                             <tr>
-                                <td>Chloride</td>
+                                <td>Chloride (mmol/L):</td>
                                 <td id="Chlorider"></td>
                             </tr>
                             <tr>
-                                <td>Creatinine</td>
+                                <td>Creatinine (mg/dL):</td>
                                 <td id="Creatininer"></td>
                             </tr>
                             <tr>
-                                <td>Bilirubin Direct</td>
+                                <td>Bilirubin direct (mg/dL):</td>
                                 <td id="Bilirubin_directr"></td>
                             </tr>
                             <tr>
-                                <td>Glucose</td>
+                                <td>Serum glocuse (mg/dL):</td>
                                 <td id="Glucoser"></td>
                             </tr>
                             <tr>
-                                <td>Lactic Acid</td>
+                                <td>Lactic acid (mg/dL):</td>
                                 <td id="Lactater"></td>
                             </tr>
                             <tr>
-                                <td>Magnesium</td>
+                                <td>Magnesium (mmol/dL):</td>
                                 <td id="Magnesiumr"></td>
                             </tr>
                             <tr>
-                                <td>Phosphate</td>
+                                <td>Phosphate (mg/dL):</td>
                                 <td id="Phosphater"></td>
                             </tr>
                             <tr>
-                                <td>Potassium</td>
+                                <td>Potassium (mmol/L):</td>
                                 <td id="Potassiumr"></td>
                             </tr>
                             <tr>
-                                <td>Total Bilirubin</td>
+                                <td>Total bilirubin (mg/dL):</td>
                                 <td id="BILIRUBINr"></td>
                             </tr>
                             <tr>
-                                <td>Troponin I</td>
+                                <td>Troponin I (ng/mL):</td>
                                 <td id="TROPONINr"></td>
                             </tr>
                             <tr>
-                                <td>Hematocrit</td>
+                                <td>Hematocrit (%):</td>
                                 <td id="Hctr"></td>
                             </tr>
                             <tr>
-                                <td>Haemoglobin</td>
+                                <td>Haemoglobin (g/dL):</td>
                                 <td id="Hbr"></td>
                             </tr>
                             <tr>
-                                <td>Partial Thromboplastin Time</td>
+                                <td>Partial thromboplastin time (seconds):</td>
                                 <td id="PTTr"></td>
                             </tr>
                             <tr>
-                                <td>Leucocyte Count</td>
+                                <td>Leukocyte count (count*10<sup>3</sup>/&#181;L):</td>
                                 <td id="WBCr"></td>
                             </tr>
                             <tr>
-                                <td>Fibrinogen</td>
+                                <td>Fibrinogen (mg/dL):</td>
                                 <td id="FIBRINOGENr"></td>
                             </tr>
                             <tr>
-                                <td>Platelate</td>
+                                <td>Platelets (count*10<sup>3</sup>/&#181;L):</td>
                                 <td id="PLATELATEr"></td>
                             </tr>
                             <tr>
-                                <td>Administrative Unit for ICU</td>
+                                <td>Administrative Identifier for ICU unit (MICU):</td>
                                 <td id="Unit1r"></td>
                             </tr>
                             <tr>
-                                <td>Administrative Unit for ICU</td>
+                                <td>Administrative Identifier for ICU unit (SICU):</td>
                                 <td id="Unit2r"></td>
                             </tr>
                             <tr>
-                                <td>Hours Between Hospital Admit <br>and ICU Admit</td>
+                                <td>Hours Between Hospital Admit and ICU Admit</td>
                                 <td id="HospAdmTimer"></td>
                             </tr>
                             <tr>
-                                <td>ICU Length of Stay</td>
+                                <td>ICU length-of-stay(hours):</td>
                                 <td id="ICULOSr"></td>
                             </tr>
                         </table>
