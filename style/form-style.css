@@ -1,5 +1,6 @@
 body {
     font-family: georgia;
+    font-size: 130%;
 }
 
 label {
@@ -12,4 +13,25 @@ h1 {
 
 .form-control:valid {
     background-color: lavender;
+}
+
+.btn{
+
+}
+
+.mystyle{
+	background-image: url(bg.jpg);
+	 background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+#filter{
+	background-image: linear-gradient(to right, rgba(141,189,250,0.4), rgba(199,145,255,0.4));
+	padding:5vh 0;
+}
+
+#filterresult{
+	background-image: linear-gradient(to right, rgba(141,189,250,0.4), rgba(199,145,255,0.4));
+	height: 100vh;
+	padding-top: 5vh;
 }
