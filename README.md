@@ -26,5 +26,6 @@ The code for creating REST Api service created that is implemented in our websit
 
 <br>
 
-The machine learning model for predicting the disease is present in this as jupyer notebook 
+The machine learning model for predicting the disease is present in this as jupyer notebook.
+The machine learning model uses Keras classifier for the classification of sepsis label. Currently we have a accuracy of 25%, and we are continously improving our model to increase the accuracy. We intend to use a layer of auto encodewrs for dimensionality reduction which would also increase its efficiency. 
 > [sihmodel.ipynb](https://github.com/sourabhyadav999/SIHRepo/blob/master/sihmodel.ipynb )
