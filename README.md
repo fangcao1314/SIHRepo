@@ -17,7 +17,7 @@ This is also a challenge proposed by PhysioNet which gives deep insight into the
 <br>
 
 The website is deployed and you can check it out here
-> https://sachinverma53121.github.io/SIHRepo/
+> https://sachinverma53121.github.io/SIHRepo/index.html
 
 <br>
 
