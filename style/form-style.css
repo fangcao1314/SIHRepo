@@ -49,11 +49,6 @@ h2 {
     transform: scale(1.03);
 }
 
-#download-button{
-  display: none;
-}
-
-
 #banner{
     background: rgb(112,128,120,0.5);
     background-image: url(hlt.jpg);
