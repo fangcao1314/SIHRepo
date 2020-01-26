@@ -104,6 +104,7 @@
             console.log(data);
 
             //WRITE VALUES IN TABLE
+            document.getElementById("result").innerHTML = "Loading Result";
             document.getElementById("ager").innerHTML = age;
             if(gender == 1)
                 document.getElementById("genderr").innerHTML ="Male";
@@ -217,9 +218,9 @@
 
 
                     if (JSON.parse(xhr.responseText)['prediction'] < 0.5) {
-                        document.getElementById("result").innerHTML = "Sespsis Not Detected";
+                        document.getElementById("result").innerHTML = "Sepsis Not Detected";
                     } else {
-                        document.getElementById("result").innerHTML = "Sespsis Detected";
+                        document.getElementById("result").innerHTML = "Sepsis Detected";
                     }
                 }
             }
@@ -254,7 +255,7 @@
                             </tr>  
                             <tr>
                                 <th>Patient's Info</th>
-                                <th>&emsp;VALUE&emsp;</th>
+                                <th>&ensp;VALUE&ensp;</th>
                             </tr>
                             <tr>
                                 <td>Age (in Years):</td>
