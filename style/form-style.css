@@ -26,8 +26,8 @@ h2 {
 
    
 #filter {
-    padding-top: 5vh;
-    background: linear-gradient(to left, rgba(123,104,238,0.4), rgba(138,43,226,0.4))
+    padding: 5vh 0;
+    background: linear-gradient(89deg, rgba(112,128,144,0.4), rgba(102,205,170,0.4))
 }
 
 #filterresult {
@@ -51,7 +51,11 @@ h2 {
 
 
 #banner{
+    background: rgb(112,128,120,0.5);
     background-image: url(hlt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #banner-text{
@@ -62,6 +66,7 @@ h2 {
     font-size: 18px;
     width: 70%;
 }
+
 
 #lab-values {
     background-color: beige;
