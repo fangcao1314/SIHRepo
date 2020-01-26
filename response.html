@@ -16,7 +16,7 @@
 <!-- SCRIPTS TO SEND FORM DATA TO API AND GET THE RESULT -->
 <script type="text/javascript">
 
-    function ReadCookie() {
+    // DATA VALUES VARIABLES
         var age = localStorage.getItem("age");
         var gender = localStorage.getItem("gender");
         var HR = localStorage.getItem("HR");
@@ -101,6 +101,7 @@
             "ICULOS": ICULOS
         };
 
+    function ReadCookie() {
         console.log(data);
 
         //WRITE VALUES IN TABLE
@@ -165,7 +166,8 @@
                     document.getElementById("result").style.color = "red";
                     document.getElementById("result").innerHTML = "Sepsis Detected";
                 }
-                // document.getElementById("download-button").style.display = "inline-block";
+                document.getElementById("download-button").style.display = "inline-block";
+                document.getElementById("download-button").disabled = false;
             }
         }
 
@@ -173,10 +175,26 @@
         console.log("success");
     }
 
-    // // WRITE DATA TO FILE
-    // function writeData(){
+        // WRITE DATA TO FILE
+        function functionOne(){
+            function download(filename, text) {
 
-    // }
+              var element = document.createElement('a');
+              element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+              element.setAttribute('download', filename);
+
+              element.style.display = 'none';
+              document.body.appendChild(element);
+
+              element.click();
+
+              document.body.removeChild(element);
+            }
+
+            // Start file download.
+            download("report.txt",JSON.stringify(data));
+            console.log("report downloaded");
+        }
 
 
 </script>
@@ -199,7 +217,7 @@
                 <center>
                     <h1>RESULT</h1>
                     <input type="button" class="btn btn-dark btn-lg box-shadow--8dp btnclass" value="Get Result" onclick="ReadCookie();"> 
-                    <!-- <input type="button" class="btn btn-dark btn-lg box-shadow--8dp btnclass" id="download-button" value="Download Report" onclick="writeData()" disabled> --> <br> <br>
+                    <input type="button" class="btn btn-dark btn-lg box-shadow--8dp btnclass" id="download-button" value="Download Report" onclick="functionOne()" disabled> <br> <br>
 
                     <div id="resulttable">
                         <table border="2" style="text-align: center; font-size:120%; display: inline-block;">
