@@ -24,21 +24,9 @@ h2 {
 }
 
 
-.mystyle {
-    background-image: url(bg.jpg);
-    background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: cover;
-    /* Resize the background image to cover the entire container */
-}
-
-.mclass{
-    margin: 5vh 0;
-}
-    
-
+   
 #filter {
-/*     padding: 5vh 0; */
+    padding-top: 5vh;
     background: linear-gradient(to left, rgba(123,104,238,0.4), rgba(138,43,226,0.4))
 }
 
