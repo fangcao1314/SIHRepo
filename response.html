@@ -159,8 +159,10 @@
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 if (JSON.parse(xhr.responseText)['prediction'] < 0.5) {
+                    document.getElementById("result").style.color = "green";
                     document.getElementById("result").innerHTML = "Sepsis Not Detected";
                 } else {
+                    document.getElementById("result").style.color = "red";
                     document.getElementById("result").innerHTML = "Sepsis Detected";
                 }
                 // document.getElementById("download-button").style.display = "inline-block";
