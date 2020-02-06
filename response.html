@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <link rel="stylesheet" href="style/bootstrap.css">
+ <link rel="stylesheet" href="style/form-style.css">
+ <title>RESULT</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- jQuery CDN -->
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+</script> -->
+
+
+<!-- SCRIPTS TO SEND FORM DATA TO API AND GET THE RESULT -->
+<script type="text/javascript">
+
+    // DATA VALUES VARIABLES
+        var age = localStorage.getItem("age");
+        var gender = localStorage.getItem("gender");
+        var HR = localStorage.getItem("HR");
+        var O2Sat = localStorage.getItem("O2Sat");
+        var Temp = localStorage.getItem("Temp");
+        var SBP = localStorage.getItem("SBP");
+        var MAP = localStorage.getItem("MAP");
+        var DBP = localStorage.getItem("DBP");
+        var Resp = localStorage.getItem("Resp");
+        var EtCO2 = localStorage.getItem("EtCO2");
+        var BaseExcess = localStorage.getItem("BaseExcess");
+        var HCO3 = localStorage.getItem("HCO3");
+        var FiO2 = localStorage.getItem("FiO2");
+        var pH = localStorage.getItem("pH");
+        var PaCO2 = localStorage.getItem("PaCO2");
+        var SaO2 = localStorage.getItem("SaO2");
+        var AST = localStorage.getItem("AST");
+        var BUN = localStorage.getItem("BUN");
+        var Alkalinephos = localStorage.getItem("Alkalinephos");
+        var Calcium = localStorage.getItem("Calcium");
+        var Chloride = localStorage.getItem("Chloride");
+        var Creatinine = localStorage.getItem("Creatinine");
+        var Bilirubin_direct = localStorage.getItem("Bilirubin_direct");
+        var Glucose = localStorage.getItem("Glucose");
+        var Lactate = localStorage.getItem("Lactate");
+        var Magnesium = localStorage.getItem("Magnesium");
+        var Phosphate = localStorage.getItem("Phosphate");
+        var Potassium = localStorage.getItem("Potassium");
+        var BILIRUBIN = localStorage.getItem("BILIRUBIN");
+        var TROPONIN = localStorage.getItem("TROPONIN");
+        var Hct = localStorage.getItem("Hct");
+        var Hb = localStorage.getItem("Hb");
+        var PTT = localStorage.getItem("PTT");
+        var WBC = localStorage.getItem("WBC");
+        var FIBRINOGEN = localStorage.getItem("FIBRINOGEN");
+        var PLATELATE = localStorage.getItem("PLATELATE");
+        var Unit1 = localStorage.getItem("Unit1");
+        var Unit2 = localStorage.getItem("Unit2");
+        var HospAdmTime = localStorage.getItem("HospAdmTime");
+        var ICULOS = localStorage.getItem("ICULOS");
+
+        const data = {
+            "HR": HR,
+            "O2Sat": O2Sat,
+            "Temp": Temp,
+            "SBP": SBP,
+            "MAP": MAP,
+            "DBP": DBP,
+            "Resp": Resp,
+            "EtCO2": EtCO2,
+            "BaseExcess": BaseExcess,
+            "HCO3": HCO3,
+            "FiO2": FiO2,
+            "pH": pH,
+            "PaCO2": PaCO2,
+            "SaO2": SaO2,
+            "AST": AST,
+            "BUN": BUN,
+            "Alkalinephos": Alkalinephos,
+            "Calcium": Calcium,
+            "Chloride": Chloride,
+            "Creatinine": Creatinine,
+            "Bilirubin_direct": Bilirubin_direct,
+            "Glucose": Glucose,
+            "Lactate": Lactate,
+            "Magnesium": Magnesium,
+            "Phosphate": Phosphate,
+            "Potassium": Potassium,
+            "Bilirubin_total": BILIRUBIN,
+            "TroponinI": TROPONIN,
+            "Hct": Hct,
+            "Hgb": Hb,
+            "PTT": PTT,
+            "WBC": WBC,
+            "Fibrinogen": FIBRINOGEN,
+            "Platelets": PLATELATE,
+            "Age": age,
+            "Gender": gender,
+            "Unit1": Unit1,
+            "Unit2": Unit2,
+            "HospAdmTime": HospAdmTime,
+            "ICULOS": ICULOS
+        };
+
+    function ReadCookie() {
+        console.log(data);
+
+        //WRITE VALUES IN TABLE
+        document.getElementById("result").innerHTML = "Loading Result";
+        document.getElementById("ager").innerHTML = age;
+        if(gender == 1)
+            document.getElementById("genderr").innerHTML ="Male";
+        else
+            document.getElementById("genderr").innerHTML = "Female";
+        document.getElementById("HRr").innerHTML = HR;
+        document.getElementById("O2Satr").innerHTML = O2Sat;
+        document.getElementById("Tempr").innerHTML = Temp;
+        document.getElementById("SBPr").innerHTML = SBP;
+        document.getElementById("MAPr").innerHTML = MAP;
+        document.getElementById("DBPr").innerHTML = DBP;
+        document.getElementById("Respr").innerHTML = Resp;
+        document.getElementById("EtCO2r").innerHTML = EtCO2;
+        document.getElementById("BaseExcessr").innerHTML = BaseExcess;
+        document.getElementById("HCO3r").innerHTML = HCO3;
+        document.getElementById("FiO2r").innerHTML = FiO2;
+        document.getElementById("pHr").innerHTML = pH;
+        document.getElementById("PaCO2r").innerHTML = PaCO2;
+        document.getElementById("SaO2r").innerHTML = SaO2;
+        document.getElementById("ASTr").innerHTML = AST;
+        document.getElementById("BUNr").innerHTML = BUN;
+        document.getElementById("Alkalinephosr").innerHTML = Alkalinephos;
+        document.getElementById("Calciumr").innerHTML = Calcium;
+        document.getElementById("Chlorider").innerHTML = Chloride;
+        document.getElementById("Creatininer").innerHTML = Creatinine;
+        document.getElementById("Bilirubin_directr").innerHTML = Bilirubin_direct;
+        document.getElementById("Glucoser").innerHTML = Glucose;
+        document.getElementById("Lactater").innerHTML = Lactate;
+        document.getElementById("Magnesiumr").innerHTML = Magnesium;
+        document.getElementById("Phosphater").innerHTML = Phosphate;
+        document.getElementById("Potassiumr").innerHTML = Potassium;
+        document.getElementById("BILIRUBINr").innerHTML = BILIRUBIN;
+        document.getElementById("TROPONINr").innerHTML = TROPONIN;
+        document.getElementById("Hctr").innerHTML = Hct;
+        document.getElementById("Hbr").innerHTML = Hb;
+        document.getElementById("PTTr").innerHTML = PTT;
+        document.getElementById("WBCr").innerHTML = WBC;
+        document.getElementById("FIBRINOGENr").innerHTML = FIBRINOGEN;
+        document.getElementById("PLATELATEr").innerHTML = PLATELATE;
+        document.getElementById("Unit1r").innerHTML = Unit1;
+        document.getElementById("Unit2r").innerHTML = Unit2;
+        document.getElementById("HospAdmTimer").innerHTML = HospAdmTime;
+        document.getElementById("ICULOSr").innerHTML = ICULOS;
+
+
+        //POST REQUEST
+        const jsonString = JSON.stringify(data);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://sepsis-prediction.herokuapp.com/prediction");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (JSON.parse(xhr.responseText)['prediction'] < 0.5) {
+                    document.getElementById("result").style.color = "green";
+                    document.getElementById("result").innerHTML = "Sepsis Not Detected";
+                } else {
+                    document.getElementById("result").style.color = "red";
+                    document.getElementById("result").innerHTML = "Sepsis Detected";
+                }
+                document.getElementById("download-button").disabled = false;
+                document.getElementById("download-button").style.display = "inline-block";
+            }
+        }
+
+        xhr.send(jsonString);
+        console.log("success");
+    }
+
+        // WRITE DATA TO FILE
+        function functionOne(){
+            function download(filename, text) {
+
+              var element = document.createElement('a');
+              element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+              element.setAttribute('download', filename);
+
+              element.style.display = 'none';
+              document.body.appendChild(element);
+
+              element.click();
+
+              document.body.removeChild(element);
+            }
+
+            // Start file download.
+            download("report.txt",JSON.stringify(data));
+            console.log("report downloaded");
+        }
+
+
+</script>
+
+</head>
+
+    <body class="bg-dark mystyle coolstyle">
+   
+    <!-- this is just jumbotrone -->
+    <div class="jumbotron jumbotron-fluid mb-0 shadow" id="banner">
+        <div class="container" id="banner-text">
+            <h1 class="ml-5">Sepsis Disease Prediction</h1>
+            <p class=" text-s ml-5">We are glad that you came here</p>
+        </div>
+    </div>
+   
+    <div id="filter">
+        <div class="container col-md-9 bg-white pb-3 col-sm-11 rounded shadow resultbox">
+            <div class="pb-5 pt-3">
+                <center>
+                    <h1>RESULT</h1>
+                    <input type="button" class="btn btn-dark btn-lg box-shadow--8dp btnclass" value="Get Result" onclick="ReadCookie();"> 
+                    <input type="button" class="btn btn-dark btn-lg box-shadow--8dp btnclass" id="download-button" value="Download Report" onclick="functionOne()" disabled> <br> <br>
+
+                    <div id="resulttable">
+                        <table border="2" style="text-align: center; font-size:120%; display: inline-block;">
+                            <tr>
+                                <th colspan="2"><h3 id="result">Click Above Button to generate result</h3></th>
+                            </tr>  
+                            <tr>
+                                <th>Patient's Info</th>
+                                <th>&ensp;VALUE&ensp;</th>
+                            </tr>
+                            <tr>
+                                <td>Age (in Years):</td>
+                                <td id="ager"></td>
+                            </tr>
+                            <tr>
+                                <td>Gender:</td>
+                                <td id="genderr"></td>
+                            </tr>
+                            <tr>
+                                <td>Heart rate (beats per minute):</td>
+                                <td id="HRr"></td>
+                            </tr>
+                            <tr>
+                                <td>Pulse oximetry (%):</td>
+                                <td id="O2Satr"></td>
+                            </tr>
+                            <tr>
+                                <td>Temprature (Deg C):</td>
+                                <td id="Tempr"></td>
+                            </tr>
+                            <tr>
+                                <td>Systolic BP (mm Hg):</td>
+                                <td id="SBPr"></td>
+                            </tr>
+                            <tr>
+                                <td>Mean arterial pressure (mm Hg):</td>
+                                <td id="MAPr"></td>
+                            </tr>
+                            <tr>
+                                <td>Diastolic BP (mm Hg):</td>
+                                <td id="DBPr"></td>
+                            </tr>
+                            <tr>
+                                <td>Respiration Rate (breaths per minute):</td>
+                                <td id="Respr"></td>
+                            </tr>
+                            <tr>
+                                <td>End tidal CO2 (mm Hg):</td>
+                                <td id="EtCO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>Measure of excess bicarbonate (mmol/L)</td>
+                                <td id="BaseExcessr"></td>
+                            </tr>
+                            <tr>
+                                <td>Bicarbonate (mmol/L):</td>
+                                <td id="HCO3r"></td>
+                            </tr>
+                            <tr>
+                                <td>Fraction of inspired oxygen (%):</td>
+                                <td id="FiO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>pH:</td>
+                                <td id="pHr"></td>
+                            </tr>
+                            <tr>
+                                <td>Partial pressure of CO2 from arterial blood (mm Hg):</td>
+                                <td id="PaCO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>Oxygen saturation of arterial blood (%):</td>
+                                <td id="SaO2r"></td>
+                            </tr>
+                            <tr>
+                                <td>Aspartate transaminase (%):</td>
+                                <td id="ASTr"></td>
+                            </tr>
+                            <tr>
+                                <td>Blood urea nitrogen (mg/dL):</td>
+                                <td id="BUNr"></td>
+                            </tr>
+                            <tr>
+                                <td>Alkaline Phosphate (IU/L):</td>
+                                <td id="Alkalinephosr"></td>
+                            </tr>
+                            <tr>
+                                <td>Calcium (mg/dL):</td>
+                                <td id="Calciumr"></td>
+                            </tr>
+                            <tr>
+                                <td>Chloride (mmol/L):</td>
+                                <td id="Chlorider"></td>
+                            </tr>
+                            <tr>
+                                <td>Creatinine (mg/dL):</td>
+                                <td id="Creatininer"></td>
+                            </tr>
+                            <tr>
+                                <td>Bilirubin direct (mg/dL):</td>
+                                <td id="Bilirubin_directr"></td>
+                            </tr>
+                            <tr>
+                                <td>Serum glocuse (mg/dL):</td>
+                                <td id="Glucoser"></td>
+                            </tr>
+                            <tr>
+                                <td>Lactic acid (mg/dL):</td>
+                                <td id="Lactater"></td>
+                            </tr>
+                            <tr>
+                                <td>Magnesium (mmol/dL):</td>
+                                <td id="Magnesiumr"></td>
+                            </tr>
+                            <tr>
+                                <td>Phosphate (mg/dL):</td>
+                                <td id="Phosphater"></td>
+                            </tr>
+                            <tr>
+                                <td>Potassium (mmol/L):</td>
+                                <td id="Potassiumr"></td>
+                            </tr>
+                            <tr>
+                                <td>Total bilirubin (mg/dL):</td>
+                                <td id="BILIRUBINr"></td>
+                            </tr>
+                            <tr>
+                                <td>Troponin I (ng/mL):</td>
+                                <td id="TROPONINr"></td>
+                            </tr>
+                            <tr>
+                                <td>Hematocrit (%):</td>
+                                <td id="Hctr"></td>
+                            </tr>
+                            <tr>
+                                <td>Haemoglobin (g/dL):</td>
+                                <td id="Hbr"></td>
+                            </tr>
+                            <tr>
+                                <td>Partial thromboplastin time (seconds):</td>
+                                <td id="PTTr"></td>
+                            </tr>
+                            <tr>
+                                <td>Leukocyte count (count*10<sup>3</sup>/&#181;L):</td>
+                                <td id="WBCr"></td>
+                            </tr>
+                            <tr>
+                                <td>Fibrinogen (mg/dL):</td>
+                                <td id="FIBRINOGENr"></td>
+                            </tr>
+                            <tr>
+                                <td>Platelets (count*10<sup>3</sup>/&#181;L):</td>
+                                <td id="PLATELATEr"></td>
+                            </tr>
+                            <tr>
+                                <td>Administrative Identifier for ICU unit (MICU):</td>
+                                <td id="Unit1r"></td>
+                            </tr>
+                            <tr>
+                                <td>Administrative Identifier for ICU unit (SICU):</td>
+                                <td id="Unit2r"></td>
+                            </tr>
+                            <tr>
+                                <td>Hours Between Hospital Admit and ICU Admit</td>
+                                <td id="HospAdmTimer"></td>
+                            </tr>
+                            <tr>
+                                <td>ICU length-of-stay(hours):</td>
+                                <td id="ICULOSr"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </center>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
