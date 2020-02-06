@@ -20,6 +20,13 @@ The website is deployed and you can check it out here
 > https://sachinverma53121.github.io/SIHRepo/index.html
 
 <br>
+To make this model available for wider audience, we have implemented another feature to our project,An Android App.
+
+This App Apk bundle internally contains our model for prediction of sepsis, Which makes this app to work in offline situation where thre is scarcity of internet
+
+> https://github.com/suveb/SepsisPredictionApp
+
+<br>
 
 The code for creating REST Api service created that is implemented in our website is found here
 > https://github.com/suveb/SepsisApiDeployment
