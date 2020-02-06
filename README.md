@@ -30,7 +30,7 @@ This is also a challenge proposed by PhysioNet which gives deep insight into the
 <br>
 To make this model available for wider audience, we have implemented another feature to our project,An Android App.
 
-## This App Apk bundle internally contains our model for prediction of sepsis, Which makes this app to work in offline situation where there is scarcity of internet
+### This App Apk bundle internally contains our model for prediction of sepsis, Which makes this app to work in offline situation where there is scarcity of internet
 > https://github.com/suveb/SepsisPredictionApp
 
 <br>
