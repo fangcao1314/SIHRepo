@@ -24,19 +24,13 @@ This is also a challenge proposed by PhysioNet which gives deep insight into the
 
 <br>
 
-PowerPoint Presentation for our problem statement
-> https://github.com/sourabhyadav999/SIHRepo/blob/master/sepsis_ppt.pptx
-
-<br>
-
-The website is deployed and you can check it out here
+## The website is deployed and you can check it out here
 > https://sachinverma53121.github.io/SIHRepo/index.html
 
 <br>
 To make this model available for wider audience, we have implemented another feature to our project,An Android App.
 
-This App Apk bundle internally contains our model for prediction of sepsis, Which makes this app to work in offline situation where thre is scarcity of internet
-
+## This App Apk bundle internally contains our model for prediction of sepsis, Which makes this app to work in offline situation where there is scarcity of internet
 > https://github.com/suveb/SepsisPredictionApp
 
 <br>
