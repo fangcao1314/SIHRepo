@@ -9,6 +9,7 @@ The Goal of this Challenge is The Early Detection of Sepsis using Physiological 
 > https://github.com/sourabhyadav999/SIHRepo/blob/master/sep.pptx
 
 ## QnA For Evaluation
+## The QnA for our project has been updated and can be found at the same link
 > https://github.com/sourabhyadav999/SIHRepo/blob/master/Product.docx
 
 
