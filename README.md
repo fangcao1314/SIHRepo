@@ -33,7 +33,7 @@ The Machine Learning Model uses Keras classifier for the classification of sepsi
 <br>
 
 Video Tutorial For Website
-> https://drive.google.com/open?id=1yAK0IIceo9F_7PycZ8VLwVDysfKJt5vi
+> https://drive.google.com/file/d/1SvQd4iZc8QOSQWxpq69SEZcvUM_qXkg3/view?usp=sharing
 
 <br>
 
