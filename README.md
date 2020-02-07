@@ -59,3 +59,9 @@ Video Tutorial For App
 The Machine Learning Model uses Keras classifier for the classification of sepsis label. Currently we have a accuracy of 73% overall and 88.94% in positive cases. We used a layer of autoencoders for dimensionality reduction which will also increase its efficiency and decreasing the complexity. 
 > [sepsisupdatedmodel.ipynb](https://github.com/sourabhyadav999/SIHRepo/blob/master/sisupdatedmodel.ipynb)
 
+
+## System Requirements
+Our website and App doesn't require any specific application.
+The website can run on any Web browser.
+Our App run offline on any Mobile device having sdk version greater than 21(Android Lollipop and Above)
+
