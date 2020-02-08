@@ -1,3 +1,4 @@
+# Software -HealthCare Problem - UP49
 # SIHRepo
 
 The Goal of this Challenge is The Early Detection of Sepsis using Physiological Data. The Early Prediction of Sepsis is Potentially Life-Saving. So we will develop a Digital Solution that uses Machine Learning Techniques to predict Sepsis Atleast 6 Hours Before the Occurence of Disease in Patients. Internationally, an Estimated 30 Million People Develop Sepsis and 6 Million People Die from Sepsis Each Year. Early Detection Helps in Improving Sepsis Outcomes, where Each Hour of Delayed Treatment has been Associated with Roughly a 4-8% Increase in Mortality .
