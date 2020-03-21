@@ -38,7 +38,7 @@ To make this model available for wider audience, we have implemented another fea
 <br>
 
 The code for creating REST Api service created that is implemented in our website is found here
-> https://github.com/suveb/SepsisApiDeployment
+> https://github.com/suveb/Sepsis-API
 
 <br>
 
